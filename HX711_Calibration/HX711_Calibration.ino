@@ -20,5 +20,5 @@ void setup() {
 }
 
 void loop() {
-  Serial.print(scale.get_units(10));
+  Serial.println(scale.get_units(10));
 }
