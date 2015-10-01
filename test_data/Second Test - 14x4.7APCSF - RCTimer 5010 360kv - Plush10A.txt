@@ -1,55 +1,65 @@
-Thrust: -0.02g  Torque: -0.01g-m  Attopilot V: 14.98 Attopilot I: 0.25 PWM Value: 950 Thrust %: 0.00% RPM: 0
-Thrust: -0.00g  Torque: -0.00g-m  Attopilot V: 14.94 Attopilot I: 0.32 PWM Value: 950 Thrust %: 0.00% RPM: 0
-Thrust: -0.02g  Torque: -0.01g-m  Attopilot V: 14.94 Attopilot I: 0.25 PWM Value: 950 Thrust %: 0.00% RPM: 0
-Thrust: -0.01g  Torque: -0.01g-m  Attopilot V: 14.94 Attopilot I: 0.25 PWM Value: 950 Thrust %: 0.00% RPM: 0
-Thrust: -0.03g  Torque: -0.01g-m  Attopilot V: 14.94 Attopilot I: 0.32 PWM Value: 950 Thrust %: 0.00% RPM: 0
-Thrust: -9.49g  Torque: -0.56g-m  Attopilot V: 14.98 Attopilot I: 0.25 PWM Value: 1050 Thrust %: 10.00% RPM: 564
-Thrust: -12.86g  Torque: -0.56g-m  Attopilot V: 14.94 Attopilot I: 0.25 PWM Value: 1050 Thrust %: 10.00% RPM: 598
-Thrust: -13.83g  Torque: -0.53g-m  Attopilot V: 14.98 Attopilot I: 0.19 PWM Value: 1050 Thrust %: 10.00% RPM: 608
-Thrust: -14.39g  Torque: -0.55g-m  Attopilot V: 14.98 Attopilot I: 0.32 PWM Value: 1050 Thrust %: 10.00% RPM: 610
-Thrust: -14.32g  Torque: -0.57g-m  Attopilot V: 14.94 Attopilot I: 0.25 PWM Value: 1050 Thrust %: 10.00% RPM: 610
-Thrust: -46.31g  Torque: -1.12g-m  Attopilot V: 14.94 Attopilot I: 0.25 PWM Value: 1150 Thrust %: 20.00% RPM: 1111
-Thrust: -53.02g  Torque: -1.08g-m  Attopilot V: 14.94 Attopilot I: 0.25 PWM Value: 1150 Thrust %: 20.00% RPM: 1131
-Thrust: -53.98g  Torque: -1.03g-m  Attopilot V: 14.94 Attopilot I: 0.25 PWM Value: 1150 Thrust %: 20.00% RPM: 1134
-Thrust: -54.64g  Torque: -0.97g-m  Attopilot V: 14.98 Attopilot I: 0.25 PWM Value: 1150 Thrust %: 20.00% RPM: 1134
-Thrust: -54.65g  Torque: -1.03g-m  Attopilot V: 14.94 Attopilot I: 0.25 PWM Value: 1150 Thrust %: 20.00% RPM: 1134
-Thrust: -96.78g  Torque: -1.87g-m  Attopilot V: 14.94 Attopilot I: 0.63 PWM Value: 1250 Thrust %: 30.00% RPM: 1511
-Thrust: -99.27g  Torque: -1.77g-m  Attopilot V: 14.94 Attopilot I: 0.32 PWM Value: 1250 Thrust %: 30.00% RPM: 1519
-Thrust: -99.48g  Torque: -1.78g-m  Attopilot V: 14.98 Attopilot I: 0.32 PWM Value: 1250 Thrust %: 30.00% RPM: 1518
-Thrust: -100.40g  Torque: -1.71g-m  Attopilot V: 14.98 Attopilot I: 0.38 PWM Value: 1250 Thrust %: 30.00% RPM: 1517
-Thrust: -99.83g  Torque: -1.74g-m  Attopilot V: 14.98 Attopilot I: 0.32 PWM Value: 1250 Thrust %: 30.00% RPM: 1520
-Thrust: -152.17g  Torque: -2.76g-m  Attopilot V: 14.98 Attopilot I: 0.51 PWM Value: 1350 Thrust %: 40.00% RPM: 1863
-Thrust: -152.67g  Torque: -2.60g-m  Attopilot V: 14.94 Attopilot I: 0.44 PWM Value: 1350 Thrust %: 40.00% RPM: 1864
-Thrust: -153.18g  Torque: -2.64g-m  Attopilot V: 14.89 Attopilot I: 0.57 PWM Value: 1350 Thrust %: 40.00% RPM: 1864
-Thrust: -151.24g  Torque: -2.67g-m  Attopilot V: 14.94 Attopilot I: 0.51 PWM Value: 1350 Thrust %: 40.00% RPM: 1866
-Thrust: -150.58g  Torque: -2.77g-m  Attopilot V: 14.98 Attopilot I: 0.51 PWM Value: 1350 Thrust %: 40.00% RPM: 1868
-Thrust: -224.73g  Torque: -4.43g-m  Attopilot V: 14.89 Attopilot I: 0.63 PWM Value: 1450 Thrust %: 50.00% RPM: 2257
-Thrust: -228.00g  Torque: -4.37g-m  Attopilot V: 14.94 Attopilot I: 0.70 PWM Value: 1450 Thrust %: 50.00% RPM: 2254
-Thrust: -227.82g  Torque: -4.23g-m  Attopilot V: 14.98 Attopilot I: 0.70 PWM Value: 1450 Thrust %: 50.00% RPM: 2258
-Thrust: -223.49g  Torque: -4.39g-m  Attopilot V: 14.98 Attopilot I: 0.70 PWM Value: 1450 Thrust %: 50.00% RPM: 2257
-Thrust: -225.48g  Torque: -4.43g-m  Attopilot V: 14.80 Attopilot I: 0.70 PWM Value: 1450 Thrust %: 50.00% RPM: 2254
-Thrust: -347.76g  Torque: -5.61g-m  Attopilot V: 14.94 Attopilot I: 1.20 PWM Value: 1550 Thrust %: 60.00% RPM: 2698
-Thrust: -344.03g  Torque: -5.74g-m  Attopilot V: 14.94 Attopilot I: 1.20 PWM Value: 1550 Thrust %: 60.00% RPM: 2702
-Thrust: -333.96g  Torque: -6.05g-m  Attopilot V: 14.94 Attopilot I: 1.20 PWM Value: 1550 Thrust %: 60.00% RPM: 2705
-Thrust: -333.05g  Torque: -6.13g-m  Attopilot V: 14.89 Attopilot I: 1.14 PWM Value: 1550 Thrust %: 60.00% RPM: 2702
-Thrust: -335.27g  Torque: -6.19g-m  Attopilot V: 14.94 Attopilot I: 1.14 PWM Value: 1550 Thrust %: 60.00% RPM: 2701
-Thrust: -457.81g  Torque: -8.07g-m  Attopilot V: 14.98 Attopilot I: 1.84 PWM Value: 1650 Thrust %: 70.00% RPM: 3095
-Thrust: -458.68g  Torque: -6.44g-m  Attopilot V: 14.80 Attopilot I: 1.77 PWM Value: 1650 Thrust %: 70.00% RPM: 3093
-Thrust: -464.33g  Torque: -6.89g-m  Attopilot V: 14.98 Attopilot I: 1.84 PWM Value: 1650 Thrust %: 70.00% RPM: 3088
-Thrust: -468.46g  Torque: -7.34g-m  Attopilot V: 14.94 Attopilot I: 1.84 PWM Value: 1650 Thrust %: 70.00% RPM: 3085
-Thrust: -470.59g  Torque: -6.92g-m  Attopilot V: 14.89 Attopilot I: 1.84 PWM Value: 1650 Thrust %: 70.00% RPM: 3078
-Thrust: -607.51g  Torque: -9.06g-m  Attopilot V: 15.08 Attopilot I: 2.85 PWM Value: 1750 Thrust %: 80.00% RPM: 3449
-Thrust: -618.17g  Torque: -9.18g-m  Attopilot V: 14.94 Attopilot I: 3.04 PWM Value: 1750 Thrust %: 80.00% RPM: 3450
-Thrust: -612.00g  Torque: -9.22g-m  Attopilot V: 14.94 Attopilot I: 2.85 PWM Value: 1750 Thrust %: 80.00% RPM: 3454
-Thrust: -611.15g  Torque: -9.95g-m  Attopilot V: 14.89 Attopilot I: 2.91 PWM Value: 1750 Thrust %: 80.00% RPM: 3453
-Thrust: -613.38g  Torque: -9.75g-m  Attopilot V: 14.89 Attopilot I: 2.91 PWM Value: 1750 Thrust %: 80.00% RPM: 3456
-Thrust: -751.78g  Torque: -11.22g-m  Attopilot V: 14.80 Attopilot I: 4.18 PWM Value: 1850 Thrust %: 90.00% RPM: 3815
-Thrust: -762.42g  Torque: -11.34g-m  Attopilot V: 14.94 Attopilot I: 4.37 PWM Value: 1850 Thrust %: 90.00% RPM: 3815
-Thrust: -766.03g  Torque: -11.61g-m  Attopilot V: 14.94 Attopilot I: 4.31 PWM Value: 1850 Thrust %: 90.00% RPM: 3817
-Thrust: -763.01g  Torque: -11.07g-m  Attopilot V: 14.94 Attopilot I: 4.31 PWM Value: 1850 Thrust %: 90.00% RPM: 3812
-Thrust: -753.64g  Torque: -11.79g-m  Attopilot V: 14.89 Attopilot I: 4.31 PWM Value: 1850 Thrust %: 90.00% RPM: 3829
-Thrust: -890.92g  Torque: -12.12g-m  Attopilot V: 14.89 Attopilot I: 5.77 PWM Value: 1950 Thrust %: 100.00% RPM: 4137
-Thrust: -887.07g  Torque: -11.30g-m  Attopilot V: 15.12 Attopilot I: 5.77 PWM Value: 1950 Thrust %: 100.00% RPM: 5517
-Thrust: -892.60g  Torque: -8.27g-m  Attopilot V: 14.94 Attopilot I: 5.77 PWM Value: 1950 Thrust %: 100.00% RPM: 4116
-Thrust: -914.36g  Torque: -10.30g-m  Attopilot V: 14.89 Attopilot I: 5.96 PWM Value: 1950 Thrust %: 100.00% RPM: 4116
-Thrust: -905.50g  Torque: -10.16g-m  Attopilot V: 14.89 Attopilot I: 5.96 PWM Value: 1950 Thrust %: 100.00% RPM: 4124
+Date: September 20, 2015
+Motor: RC Timer 5010 360kV
+Battery: Power Supply 4s
+ESC: Turnigy Plush 10A
+Prop: 
+    Name: APC 14x4.7 SF
+    Diameter: 14.0 in
+    Pitch: 4.7 in
+Notes: Second Test!!
+
+Thrust: -0.02 g, Torque: -0.01 g-m, Voltage: 14.98 V, Current: 0.25 A, PWM: 950, Throttle: 0.00 %, RPM: 0
+Thrust: -0.00 g, Torque: -0.00 g-m, Voltage: 14.94 V, Current: 0.32 A, PWM: 950, Throttle: 0.00 %, RPM: 0
+Thrust: -0.02 g, Torque: -0.01 g-m, Voltage: 14.94 V, Current: 0.25 A, PWM: 950, Throttle: 0.00 %, RPM: 0
+Thrust: -0.01 g, Torque: -0.01 g-m, Voltage: 14.94 V, Current: 0.25 A, PWM: 950, Throttle: 0.00 %, RPM: 0
+Thrust: -0.03 g, Torque: -0.01 g-m, Voltage: 14.94 V, Current: 0.32 A, PWM: 950, Throttle: 0.00 %, RPM: 0
+Thrust: -9.49 g, Torque: -0.56 g-m, Voltage: 14.98 V, Current: 0.25 A, PWM: 1050, Throttle: 10.00 %, RPM: 564
+Thrust: -12.86 g, Torque: -0.56 g-m, Voltage: 14.94 V, Current: 0.25 A, PWM: 1050, Throttle: 10.00 %, RPM: 598
+Thrust: -13.83 g, Torque: -0.53 g-m, Voltage: 14.98 V, Current: 0.19 A, PWM: 1050, Throttle: 10.00 %, RPM: 608
+Thrust: -14.39 g, Torque: -0.55 g-m, Voltage: 14.98 V, Current: 0.32 A, PWM: 1050, Throttle: 10.00 %, RPM: 610
+Thrust: -14.32 g, Torque: -0.57 g-m, Voltage: 14.94 V, Current: 0.25 A, PWM: 1050, Throttle: 10.00 %, RPM: 610
+Thrust: -46.31 g, Torque: -1.12 g-m, Voltage: 14.94 V, Current: 0.25 A, PWM: 1150, Throttle: 20.00 %, RPM: 1111
+Thrust: -53.02 g, Torque: -1.08 g-m, Voltage: 14.94 V, Current: 0.25 A, PWM: 1150, Throttle: 20.00 %, RPM: 1131
+Thrust: -53.98 g, Torque: -1.03 g-m, Voltage: 14.94 V, Current: 0.25 A, PWM: 1150, Throttle: 20.00 %, RPM: 1134
+Thrust: -54.64 g, Torque: -0.97 g-m, Voltage: 14.98 V, Current: 0.25 A, PWM: 1150, Throttle: 20.00 %, RPM: 1134
+Thrust: -54.65 g, Torque: -1.03 g-m, Voltage: 14.94 V, Current: 0.25 A, PWM: 1150, Throttle: 20.00 %, RPM: 1134
+Thrust: -96.78 g, Torque: -1.87 g-m, Voltage: 14.94 V, Current: 0.63 A, PWM: 1250, Throttle: 30.00 %, RPM: 1511
+Thrust: -99.27 g, Torque: -1.77 g-m, Voltage: 14.94 V, Current: 0.32 A, PWM: 1250, Throttle: 30.00 %, RPM: 1519
+Thrust: -99.48 g, Torque: -1.78 g-m, Voltage: 14.98 V, Current: 0.32 A, PWM: 1250, Throttle: 30.00 %, RPM: 1518
+Thrust: -100.40 g, Torque: -1.71 g-m, Voltage: 14.98 V, Current: 0.38 A, PWM: 1250, Throttle: 30.00 %, RPM: 1517
+Thrust: -99.83 g, Torque: -1.74 g-m, Voltage: 14.98 V, Current: 0.32 A, PWM: 1250, Throttle: 30.00 %, RPM: 1520
+Thrust: -152.17 g, Torque: -2.76 g-m, Voltage: 14.98 V, Current: 0.51 A, PWM: 1350, Throttle: 40.00 %, RPM: 1863
+Thrust: -152.67 g, Torque: -2.60 g-m, Voltage: 14.94 V, Current: 0.44 A, PWM: 1350, Throttle: 40.00 %, RPM: 1864
+Thrust: -153.18 g, Torque: -2.64 g-m, Voltage: 14.89 V, Current: 0.57 A, PWM: 1350, Throttle: 40.00 %, RPM: 1864
+Thrust: -151.24 g, Torque: -2.67 g-m, Voltage: 14.94 V, Current: 0.51 A, PWM: 1350, Throttle: 40.00 %, RPM: 1866
+Thrust: -150.58 g, Torque: -2.77 g-m, Voltage: 14.98 V, Current: 0.51 A, PWM: 1350, Throttle: 40.00 %, RPM: 1868
+Thrust: -224.73 g, Torque: -4.43 g-m, Voltage: 14.89 V, Current: 0.63 A, PWM: 1450, Throttle: 50.00 %, RPM: 2257
+Thrust: -228.00 g, Torque: -4.37 g-m, Voltage: 14.94 V, Current: 0.70 A, PWM: 1450, Throttle: 50.00 %, RPM: 2254
+Thrust: -227.82 g, Torque: -4.23 g-m, Voltage: 14.98 V, Current: 0.70 A, PWM: 1450, Throttle: 50.00 %, RPM: 2258
+Thrust: -223.49 g, Torque: -4.39 g-m, Voltage: 14.98 V, Current: 0.70 A, PWM: 1450, Throttle: 50.00 %, RPM: 2257
+Thrust: -225.48 g, Torque: -4.43 g-m, Voltage: 14.80 V, Current: 0.70 A, PWM: 1450, Throttle: 50.00 %, RPM: 2254
+Thrust: -347.76 g, Torque: -5.61 g-m, Voltage: 14.94 V, Current: 1.20 A, PWM: 1550, Throttle: 60.00 %, RPM: 2698
+Thrust: -344.03 g, Torque: -5.74 g-m, Voltage: 14.94 V, Current: 1.20 A, PWM: 1550, Throttle: 60.00 %, RPM: 2702
+Thrust: -333.96 g, Torque: -6.05 g-m, Voltage: 14.94 V, Current: 1.20 A, PWM: 1550, Throttle: 60.00 %, RPM: 2705
+Thrust: -333.05 g, Torque: -6.13 g-m, Voltage: 14.89 V, Current: 1.14 A, PWM: 1550, Throttle: 60.00 %, RPM: 2702
+Thrust: -335.27 g, Torque: -6.19 g-m, Voltage: 14.94 V, Current: 1.14 A, PWM: 1550, Throttle: 60.00 %, RPM: 2701
+Thrust: -457.81 g, Torque: -8.07 g-m, Voltage: 14.98 V, Current: 1.84 A, PWM: 1650, Throttle: 70.00 %, RPM: 3095
+Thrust: -458.68 g, Torque: -6.44 g-m, Voltage: 14.80 V, Current: 1.77 A, PWM: 1650, Throttle: 70.00 %, RPM: 3093
+Thrust: -464.33 g, Torque: -6.89 g-m, Voltage: 14.98 V, Current: 1.84 A, PWM: 1650, Throttle: 70.00 %, RPM: 3088
+Thrust: -468.46 g, Torque: -7.34 g-m, Voltage: 14.94 V, Current: 1.84 A, PWM: 1650, Throttle: 70.00 %, RPM: 3085
+Thrust: -470.59 g, Torque: -6.92 g-m, Voltage: 14.89 V, Current: 1.84 A, PWM: 1650, Throttle: 70.00 %, RPM: 3078
+Thrust: -607.51 g, Torque: -9.06 g-m, Voltage: 15.08 V, Current: 2.85 A, PWM: 1750, Throttle: 80.00 %, RPM: 3449
+Thrust: -618.17 g, Torque: -9.18 g-m, Voltage: 14.94 V, Current: 3.04 A, PWM: 1750, Throttle: 80.00 %, RPM: 3450
+Thrust: -612.00 g, Torque: -9.22 g-m, Voltage: 14.94 V, Current: 2.85 A, PWM: 1750, Throttle: 80.00 %, RPM: 3454
+Thrust: -611.15 g, Torque: -9.95 g-m, Voltage: 14.89 V, Current: 2.91 A, PWM: 1750, Throttle: 80.00 %, RPM: 3453
+Thrust: -613.38 g, Torque: -9.75 g-m, Voltage: 14.89 V, Current: 2.91 A, PWM: 1750, Throttle: 80.00 %, RPM: 3456
+Thrust: -751.78 g, Torque: -11.22 g-m, Voltage: 14.80 V, Current: 4.18 A, PWM: 1850, Throttle: 90.00 %, RPM: 3815
+Thrust: -762.42 g, Torque: -11.34 g-m, Voltage: 14.94 V, Current: 4.37 A, PWM: 1850, Throttle: 90.00 %, RPM: 3815
+Thrust: -766.03 g, Torque: -11.61 g-m, Voltage: 14.94 V, Current: 4.31 A, PWM: 1850, Throttle: 90.00 %, RPM: 3817
+Thrust: -763.01 g, Torque: -11.07 g-m, Voltage: 14.94 V, Current: 4.31 A, PWM: 1850, Throttle: 90.00 %, RPM: 3812
+Thrust: -753.64 g, Torque: -11.79 g-m, Voltage: 14.89 V, Current: 4.31 A, PWM: 1850, Throttle: 90.00 %, RPM: 3829
+Thrust: -890.92 g, Torque: -12.12 g-m, Voltage: 14.89 V, Current: 5.77 A, PWM: 1950, Throttle: 100.00 %, RPM: 4137
+Thrust: -887.07 g, Torque: -11.30 g-m, Voltage: 15.12 V, Current: 5.77 A, PWM: 1950, Throttle: 100.00 %, RPM: 5517
+Thrust: -892.60 g, Torque: -8.27 g-m, Voltage: 14.94 V, Current: 5.77 A, PWM: 1950, Throttle: 100.00 %, RPM: 4116
+Thrust: -914.36 g, Torque: -10.30 g-m, Voltage: 14.89 V, Current: 5.96 A, PWM: 1950, Throttle: 100.00 %, RPM: 4116
+Thrust: -905.50 g, Torque: -10.16 g-m, Voltage: 14.89 V, Current: 5.96 A, PWM: 1950, Throttle: 100.00 %, RPM: 4124
