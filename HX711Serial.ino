@@ -37,64 +37,21 @@ void setup() {
   delay(2000);
   myservo.writeMicroseconds(950);
   delay(1500);
-//  attachInterrupt(0, RPMCount, RISING);     //  ADD A HIGH PRIORITY ACTION ( AN INTERRUPT)  WHEN THE SENSOR GOES FROM LOW TO HIGH
   pinMode(startEmergencyPin,INPUT_PULLUP);
   pinMode(armPin,INPUT_PULLUP);
   pinMode(armLed,OUTPUT);
   pinMode(rpmPin,INPUT);
-     
-//  Serial.println("Before setting up the scale:");
-//  Serial.print("read: \t\t");
-//  Serial.println(scale.read());			// print a raw reading from the ADC
-//
-//  Serial.print("read average: \t\t");
-//  Serial.println(scale.read_average(20));  	// print the average of 20 readings from the ADC
-//
-//  Serial.print("get value: \t\t");
-//  Serial.println(scale.get_value(5));		// print the average of 5 readings from the ADC minus the tare weight (not set yet)
-//
-//  Serial.print("get units: \t\t");
-//  Serial.println(scale.get_units(5), 1);	// print the average of 5 readings from the ADC minus tare weight (not set) divided 
-//						// by the SCALE parameter (not set yet)  
   scale.set_gain(128);
   scale.set_scale(-409.08f);                      // this value is obtained by calibrating the scale with known weights; see the README for details
   scale.tare();	
   scale2.set_gain(32);
   scale2.set_scale(1042.36f);
   scale2.tare();			        // reset the scale to 0
-//  scale2.set_scale(2280.f);
-//  scale2.tare();
-
-//  Serial.println("After setting up the scale:");
-//
-//  Serial.print("read: \t\t");
-//  Serial.println(scale.read());                 // print a raw reading from the ADC
-//
-//  Serial.print("read average: \t\t");
-//  Serial.println(scale.read_average(20));       // print the average of 20 readings from the ADC
-//
-//  Serial.print("get value: \t\t");
-//  Serial.println(scale.get_value(5));		// print the average of 5 readings from the ADC minus the tare weight, set with tare()
-//
-//  Serial.print("get units: \t\t");
-//  Serial.println(scale.get_units(5), 1);        // print the average of 5 readings from the ADC minus tare weight, divided 
-//						// by the SCALE parameter set with set_scale
 
   Serial.println("Readings:");
 }
 
 void loop() {
-   
-//  Serial.print("one reading:\t");
-//  Serial.print(scale.get_units(), 1);
-//  Serial.print("\t| average:\t");
-//  Serial.println(scale.get_units(1), 1);
-////  Serial.print("second reading:\t");
-////  Serial.println(scale2.get_units(1),1);
-//
-//  scale.power_down();			        // put the ADC in sleep mode
-////  delay(5000);
-//  scale.power_up();
   if(digitalRead(armPin) == 0){
     if(armed == 0){
       armed = 1;
@@ -130,23 +87,25 @@ void loop() {
       //  scale.set_scale(-423.92f);  
         Serial.print("Thrust: ");
         Serial.print(scale.get_units(1)/2.4525);
-        Serial.print("g ");
+        Serial.print("g,");
         Serial.print(" Torque: ");
         scale2.set_gain(32);
       //  scale2.set_scale(-1284.38f);
         Serial.print(scale2.get_units(1)*0.1019);
-        Serial.print("g-m ");
-        Serial.print(" Attopilot V: ");
+        Serial.print("g-m,");
+        Serial.print(" Voltage: ");
         Serial.print(VFinal);
-        Serial.print(" Attopilot I: ");
+        Serial.print("V,");
+        Serial.print(" Current: ");
         Serial.print(IFinal);
-        Serial.print(" PWM Value: ");
+        Serial.print("A,");
+        Serial.print(" PWM: ");
         Serial.print(thrustValue);
-        Serial.print(" Thrust %: ");
+        Serial.print(",");
+        Serial.print(" Throttle: ");
         Serial.print(((thrustValue-950)/1000.0)*100);
-        Serial.print("%");
+        Serial.print("%,");
         Serial.print(" RPM: ");
-  //        REV = 0;
         Serial.println(measureRPM());
         if(digitalRead(startEmergencyPin) == 0||testStarted == 0){
           myservo.writeMicroseconds(950);
