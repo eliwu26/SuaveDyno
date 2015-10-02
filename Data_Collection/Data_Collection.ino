@@ -1,5 +1,5 @@
 //SuaveDyno
-#include "HX711.h"
+#include <HX711.h>
 #include <Servo.h>
 // HX711.DOUT	- pin #A2
 // HX711.PD_SCK	- pin #A3
