@@ -13,8 +13,8 @@ In order to calibrate ESC, plug in Arduino or upload sketch, wait until start/em
 #include <Servo.h>
 
 //Constants for APM Power Module
-#define VOLTAGE_CONSTANT 0.04653
-#define CURRENT_CONSTANT 0.06336
+#define VOLTAGE_CONSTANT 10.157/1.1361
+#define CURRENT_CONSTANT 10.5 
 // HX711.DOUT	- pin #A2
 // HX711.PD_SCK	- pin #A3
 
@@ -23,9 +23,14 @@ HX711 scale2(A2,A3);
 
 Servo myservo;
 
+//ADC Values
+unsigned int ADCValue;
+double Voltage;
+double Vcc;
+
 //Arducopter Power Module
-int VRaw; 
-int IRaw;
+double VRaw; 
+double IRaw;
 float VFinal; 
 float IFinal;
 
@@ -41,23 +46,39 @@ int armed = 0;
 int startEmergencyPin = 6;
 int armPin = 3;
 int rpmPin = 2;
-int vPin = A0;
+int vPin = A1;
 int iPin = A5;
+
+//For calibrating the ADC
+long readVcc() {
+  long result;
+  // Read 1.1V reference against AVcc
+  ADMUX = _BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
+  delay(2); // Wait for Vref to settle
+  ADCSRA |= _BV(ADSC); // Convert
+  while (bit_is_set(ADCSRA,ADSC));
+  result = ADCL;
+  result |= ADCH<<8;
+  result = 1125300L / result; // Back-calculate AVcc in mV
+  return result;
+}
 
 void setup() {
   Serial.begin(38400); //Run serial
   Serial.println("HX711 Demo");
+  analogReference(DEFAULT);
+  Vcc = readVcc()/1000.0; //calibrate the ADC
   
   myservo.attach(9); //Initialize PWM on pin 9
-  delay(3000);
-  
+//  delay(3000);
+  myservo.writeMicroseconds(950);
   //Initialize Pins
   pinMode(startEmergencyLed,OUTPUT);
   pinMode(startEmergencyPin,INPUT_PULLUP);
   pinMode(armPin,INPUT_PULLUP);
   pinMode(armLed,OUTPUT);
   pinMode(rpmPin,INPUT);
-  
+  /**
   //ESC Calibration
   myservo.writeMicroseconds(2000); //Write ESC high for calibration
   for(int i = 0; i < 3; i ++){ //Notify user that calibration has begun
@@ -68,6 +89,8 @@ void setup() {
   }
   delay(2000);
   myservo.writeMicroseconds(950);
+  **/
+  
   digitalWrite(startEmergencyLed,1); //Notify user that calibration has finished
   delay(1000);
   digitalWrite(startEmergencyLed,0);
@@ -118,10 +141,10 @@ void loop() {
       for(int j = 0; j < 5; j++){
         
         //Read voltage and current
-        VRaw = analogRead(vPin);
-        IRaw = analogRead(iPin);
+        VRaw = (analogRead(vPin) / 1023.0) * Vcc;
+        IRaw = (analogRead(iPin) / 1023.0) * Vcc;
         VFinal = VRaw*VOLTAGE_CONSTANT; 
-        IFinal = (IRaw*CURRENT_CONSTANT); 
+        IFinal = (IRaw*CURRENT_CONSTANT)-.345; 
         
         //Set up to read thrust cell
         scale.set_gain(128);
