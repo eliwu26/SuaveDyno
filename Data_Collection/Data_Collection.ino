@@ -145,7 +145,8 @@ void loop() {
         IRaw = (analogRead(iPin) / 1023.0) * Vcc;
         VFinal = VRaw*VOLTAGE_CONSTANT; 
         IFinal = (IRaw*CURRENT_CONSTANT)-.345; 
-        
+        if(VFinal < 0) VFinal = 0;
+        if(IFinal < 0) IFinal = 0;
         //Set up to read thrust cell
         scale.set_gain(128);
         Serial.print("Thrust: ");
