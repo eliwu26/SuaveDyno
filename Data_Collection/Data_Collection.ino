@@ -211,10 +211,10 @@ void loop() {
 }
 
 //Blocking measure RPM using EagleTree optical RPM sensor
-int measureRPM(){
+unsigned measureRPM(){
   long currtime = micros();                 // GET CURRENT TIME
   int changes = 0;
-  int rpm = 0;
+  unsigned rpm = 0;
   bool timeOut = false;
   while(changes < 5 && !timeOut){
     
