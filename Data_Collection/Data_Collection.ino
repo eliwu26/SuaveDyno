@@ -49,8 +49,6 @@ int armed = 0;
 int startEmergencyPin = 6;
 int armPin = 3;
 int rpmPin = 2;
-int vPin = A1;
-int iPin = A5;
 
 //For calibrating the ADC
 long readVcc() {
@@ -139,10 +137,11 @@ void loop() {
     for(int i = 0; i < 11; i++){
       int thrustValue = 950+(i*100);
       myservo.writeMicroseconds(thrustValue);
-      delay(1000);
+      delay(4000);
       
       //Run 5 sensor readings
       for(int j = 0; j < 5; j++){
+
         
         //Read voltage and current
 //        VRaw = (analogRead(vPin) / 1023.0) * Vcc;
@@ -184,6 +183,7 @@ void loop() {
         Serial.print("%,");
         Serial.print(" RPM: ");
         Serial.println(measureRPM());
+        Serial.flush();
         
         //Emergency button press
         if(digitalRead(startEmergencyPin) == 0||testStarted == 0){
@@ -216,8 +216,14 @@ void loop() {
     analogWrite(startEmergencyLed,0);
     Serial.println();
     Serial.println("Test completed.\n");
+    Serial.flush();
+    delay(3000);
   }
 }
+
+#define RPM_NUMBER_CHANGES 5
+#define RPM_TIMEOUT 1000000 // [us]
+#define RPM_HIGH_THRESHOLD 300
 
 //Blocking measure RPM using EagleTree optical RPM sensor
 unsigned measureRPM(){
@@ -225,24 +231,25 @@ unsigned measureRPM(){
   int changes = 0;
   unsigned rpm = 0;
   bool timeOut = false;
-  while(changes < 20 && !timeOut){
+  while(changes < RPM_NUMBER_CHANGES && !timeOut){
     
-    if((micros()-currtime)>1000000) 
+    if((micros()-currtime)>RPM_TIMEOUT) 
       timeOut = true;
     
     delayMicroseconds(1);
     
-    if(digitalRead(2) == 0){
+    //if(digitalRead(2) == 0){
+    if(analogRead(A1) < RPM_HIGH_THRESHOLD){
       
-      while(digitalRead(2) == 0 && !timeOut){
+      while(analogRead(A1) < RPM_HIGH_THRESHOLD && !timeOut){
         
-        if((micros()-currtime)>1000000) 
+        if((micros()-currtime)>RPM_TIMEOUT) 
           timeOut = true;
           
         delayMicroseconds(1);
         
       }
-      if(digitalRead(2) == 1){
+      if(analogRead(A1) > RPM_HIGH_THRESHOLD){
         if(changes == 0) 
           currtime = micros();
           
@@ -250,7 +257,7 @@ unsigned measureRPM(){
       }
     }
   }
-  if (changes == 20){
+  if (changes == RPM_NUMBER_CHANGES){
     rpm = (((changes-1)* 60 * 1000000)/(micros()-currtime)) ;       //  CALCULATE  RPM USING REVOLUTIONS AND ELAPSED TIM
   }
   return rpm;
