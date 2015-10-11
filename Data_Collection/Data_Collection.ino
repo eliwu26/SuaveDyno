@@ -225,7 +225,7 @@ unsigned measureRPM(){
   int changes = 0;
   unsigned rpm = 0;
   bool timeOut = false;
-  while(changes < 5 && !timeOut){
+  while(changes < 20 && !timeOut){
     
     if((micros()-currtime)>1000000) 
       timeOut = true;
