@@ -8,18 +8,20 @@ At any point, long press start test/emergency to terminate and power down motor.
 
 In order to calibrate ESC, plug in Arduino or upload sketch, wait until start/emergency light flashes, plug in ESC, let ESC calibrate, then unplug and replug ESC.
 **/
-
+#include <Wire.h>
+#include <Adafruit_ADS1015.h>
 #include <HX711.h>
 #include <Servo.h>
 
 //Constants for APM Power Module
-#define VOLTAGE_CONSTANT 10.157/1.1361
-#define CURRENT_CONSTANT 10.5 
+#define VOLTAGE_CONSTANT 0.00190263
+#define CURRENT_CONSTANT 0.003237
 // HX711.DOUT	- pin #A2
 // HX711.PD_SCK	- pin #A3
 
 HX711 scale(A2,A3);
 HX711 scale2(A2,A3);
+Adafruit_ADS1115 ads;
 
 Servo myservo;
 
@@ -33,6 +35,7 @@ double VRaw;
 double IRaw;
 float VFinal; 
 float IFinal;
+int16_t adc0, adc1, adc2, adc3;
 
 //Status LED
 int startEmergencyLed = 4;
@@ -78,6 +81,7 @@ void setup() {
   pinMode(armPin,INPUT_PULLUP);
   pinMode(armLed,OUTPUT);
   pinMode(rpmPin,INPUT);
+  ads.begin();
   /**
   //ESC Calibration
   myservo.writeMicroseconds(2000); //Write ESC high for calibration
@@ -141,12 +145,16 @@ void loop() {
       for(int j = 0; j < 5; j++){
         
         //Read voltage and current
-        VRaw = (analogRead(vPin) / 1023.0) * Vcc;
-        IRaw = (analogRead(iPin) / 1023.0) * Vcc;
-        VFinal = VRaw*VOLTAGE_CONSTANT; 
-        IFinal = (IRaw*CURRENT_CONSTANT)-.345; 
-        if(VFinal < 0) VFinal = 0;
-        if(IFinal < 0) IFinal = 0;
+//        VRaw = (analogRead(vPin) / 1023.0) * Vcc;
+//        IRaw = (analogRead(iPin) / 1023.0) * Vcc;
+//        VFinal = VRaw*VOLTAGE_CONSTANT; 
+//        IFinal = (IRaw*CURRENT_CONSTANT)-.345; 
+//        if(VFinal < 0) VFinal = 0;
+//        if(IFinal < 0) IFinal = 0;
+
+        adc0 = ads.readADC_SingleEnded(0);
+        adc1 = ads.readADC_SingleEnded(1);
+  
         //Set up to read thrust cell
         scale.set_gain(128);
         Serial.print("Thrust: ");
@@ -161,10 +169,10 @@ void loop() {
         
         //Voltage and current
         Serial.print(" Voltage: ");
-        Serial.print(VFinal);
+        Serial.print(adc0*VOLTAGE_CONSTANT);
         Serial.print("V,");
         Serial.print(" Current: ");
-        Serial.print(IFinal);
+        Serial.print(adc1*CURRENT_CONSTANT);
         Serial.print("A,");
         
         //Control values
@@ -242,7 +250,7 @@ unsigned measureRPM(){
       }
     }
   }
-  if (changes == 5){
+  if (changes == 20){
     rpm = (((changes-1)* 60 * 1000000)/(micros()-currtime)) ;       //  CALCULATE  RPM USING REVOLUTIONS AND ELAPSED TIM
   }
   return rpm;
