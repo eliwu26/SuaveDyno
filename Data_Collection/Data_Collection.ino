@@ -31,9 +31,9 @@ for the low PWM, push the arming switch again.
 // ------------------------------------------------------------------------------
 
 // High level settings
-#define PWM_THROTTLE_STEPS 10   // number of pwm steps
+#define PWM_THROTTLE_STEPS 3   // number of pwm steps
 #define TIME_DELAY_SETTLE  4000 // milliseconds to wait after each step
-#define N_SENSOR_SAMPLES   5    // number of samples per step
+#define N_SENSOR_SAMPLES   2    // number of samples per step
 
 // Scales
 #define SCALE_THRUST_CALIBRATION -419.66f
@@ -49,6 +49,7 @@ HX711 scale_torque(A2,A3);
 #define VOLTAGE_CONSTANT 0.00190263
 #define CURRENT_CONSTANT 0.003237
 Adafruit_ADS1115 adc_battery;
+double Vcc;
 
 // Servo driver for throttle
 #define PWM_THROTTLE_LOW  1000
@@ -98,24 +99,31 @@ void setup() {
   pinMode(pin_startstop,INPUT_PULLUP);
   pinMode(pin_arm,INPUT_PULLUP);
   pinMode(pin_arm_status,OUTPUT);
+
+  // ADC Initialization
   adc_battery.begin();
   
   // Scale Initialization
   tare_scales();
+
+  // Let it soak
+  delay(1000);
+    
+  // Check for ESC Calibration
+  if ( digitalRead(pin_arm) == 0 ) { 
+    Serial.println("");
+    calibrate_esc();
+  }
   
   // Startup complete
   digitalWrite(pin_startstop_status,1); 
-  delay(500);
+  delay(1000);
   digitalWrite(pin_startstop_status,0);
   Serial.println("Done!");
-  Serial.println("");
-  
-  // Check for ESC Calibration
-  if ( digitalRead(pin_arm) ) 
-    calibrate_esc();
   
   // Here we go!
   Serial.println("Ready to Sample.");
+  Serial.println("");
 }
 
 
@@ -139,6 +147,7 @@ void loop() {
     if( !test_started ){
       test_started = true;
       analogWrite(pin_startstop_status,200);
+      Serial.println("Start!");
       delay(2000);
     }
   }
@@ -152,6 +161,9 @@ void loop() {
     
     // Tare the scales for each new test
     tare_scales();
+
+    // Calibrate on VCC
+    Vcc = read_vcc();
     
     // Run throttle setpoints
     for(int i_thr = 0; i_thr < (PWM_THROTTLE_STEPS+1); i_thr++){
@@ -163,7 +175,9 @@ void loop() {
       servo_throttle.writeMicroseconds(this_pwm_thrust);
       
       // Allow time to settle
-      delay(TIME_DELAY_SETTLE);
+      if (i_thr > 0) {
+        delay(TIME_DELAY_SETTLE);
+      }
       
       // Run sensor readings
       for(int i_samp = 0; i_samp < N_SENSOR_SAMPLES; i_samp++){
@@ -303,9 +317,9 @@ void calibrate_esc() {
   }
   
   // Wait for user to release then press arm switch again
-  while( digitalRead(pin_arm) )
+  while( digitalRead(pin_arm) == 0 )
     delay(10);
-  while( !digitalRead(pin_arm) )
+  while( digitalRead(pin_arm) == 1 )
     delay(10);
   
   servo_throttle.writeMicroseconds(PWM_THROTTLE_LOW);
@@ -319,8 +333,6 @@ void calibrate_esc() {
     delay(100);
   }
   
-  Serial.println("");
-  
 }
 
 
@@ -329,8 +341,8 @@ void tare_scales() {
   scale_thrust.set_gain (SCALE_THRUST_CHANNEL);
   scale_thrust.set_scale(SCALE_THRUST_CALIBRATION);
   scale_thrust.tare();	
-  scale_torque.set_gain (SCALE_THRUST_CHANNEL);
-  scale_torque.set_scale(SCALE_TORQUE_CHANNEL);
+  scale_torque.set_gain (SCALE_TORQUE_CHANNEL);
+  scale_torque.set_scale(SCALE_TORQUE_CALIBRATION);
   scale_torque.tare();
 }
 
