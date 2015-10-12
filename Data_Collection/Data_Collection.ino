@@ -31,9 +31,9 @@ for the low PWM, push the arming switch again.
 // ------------------------------------------------------------------------------
 
 // High level settings
-#define PWM_THROTTLE_STEPS 3   // number of pwm steps
+#define PWM_THROTTLE_STEPS 10   // number of pwm steps
 #define TIME_DELAY_SETTLE  4000 // milliseconds to wait after each step
-#define N_SENSOR_SAMPLES   2    // number of samples per step
+#define N_SENSOR_SAMPLES   5    // number of samples per step
 
 // Scales
 #define SCALE_THRUST_CALIBRATION -419.66f
@@ -73,6 +73,7 @@ int pin_arm_status       = 7;
 int pin_throttle         = 9;
 int pin_rpm              = A1;
 
+int jnk = 0;
 
 // ------------------------------------------------------------------------------
 //   SETUP
@@ -102,7 +103,7 @@ void setup() {
 
   // ADC Initialization
   adc_battery.begin();
-  
+
   // Scale Initialization
   tare_scales();
 
