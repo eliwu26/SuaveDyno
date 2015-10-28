@@ -1,0 +1,40 @@
+Date: October 11, 2015
+Motor: ECO Motor 2204
+Battery: Tunigy 2200mAh 4s
+ESC: Rotor Geeks 12A
+Prop: 
+    Name: GemFan 5030 3-Blade
+    Diameter: 5.0 in
+    Pitch: 3.0 in
+    
+Throttle: 0.00 %, PWM: 1000 us, Thrust: 0.07 g, Torque: -0.00 g-m, Voltage: 16.12 V, Current: 0.04 A, RPM: 0
+Throttle: 0.00 %, PWM: 1000 us, Thrust: 0.03 g, Torque: -0.00 g-m, Voltage: 16.12 V, Current: 0.04 A, RPM: 0
+Throttle: 0.00 %, PWM: 1000 us, Thrust: 0.05 g, Torque: -0.00 g-m, Voltage: 16.12 V, Current: 0.04 A, RPM: 0
+Throttle: 10.00 %, PWM: 1100 us, Thrust: 0.26 g, Torque: 0.02 g-m, Voltage: 16.09 V, Current: 0.55 A, RPM: 285
+Throttle: 10.00 %, PWM: 1100 us, Thrust: 2.80 g, Torque: -0.05 g-m, Voltage: 16.10 V, Current: 0.04 A, RPM: 5060
+Throttle: 10.00 %, PWM: 1100 us, Thrust: 26.69 g, Torque: -0.09 g-m, Voltage: 16.11 V, Current: 0.04 A, RPM: 5158
+Throttle: 20.00 %, PWM: 1200 us, Thrust: 73.61 g, Torque: -0.96 g-m, Voltage: 16.09 V, Current: 0.40 A, RPM: 8453
+Throttle: 20.00 %, PWM: 1200 us, Thrust: 74.07 g, Torque: -1.04 g-m, Voltage: 16.09 V, Current: 0.39 A, RPM: 8431
+Throttle: 20.00 %, PWM: 1200 us, Thrust: 74.39 g, Torque: -1.03 g-m, Voltage: 16.08 V, Current: 0.39 A, RPM: 8426
+Throttle: 30.00 %, PWM: 1300 us, Thrust: 129.48 g, Torque: -1.14 g-m, Voltage: 16.05 V, Current: 1.20 A, RPM: 11033
+Throttle: 30.00 %, PWM: 1300 us, Thrust: 129.87 g, Torque: -1.16 g-m, Voltage: 16.05 V, Current: 1.16 A, RPM: 11033
+Throttle: 30.00 %, PWM: 1300 us, Thrust: 129.65 g, Torque: -1.20 g-m, Voltage: 16.05 V, Current: 1.21 A, RPM: 11090
+Throttle: 40.00 %, PWM: 1400 us, Thrust: 187.15 g, Torque: -2.90 g-m, Voltage: 16.00 V, Current: 2.18 A, RPM: 13186
+Throttle: 40.00 %, PWM: 1400 us, Thrust: 186.57 g, Torque: -3.14 g-m, Voltage: 16.00 V, Current: 2.15 A, RPM: 13204
+Throttle: 40.00 %, PWM: 1400 us, Thrust: 157.76 g, Torque: -3.40 g-m, Voltage: 16.00 V, Current: 2.22 A, RPM: 13210
+Throttle: 50.00 %, PWM: 1500 us, Thrust: 200.56 g, Torque: -2.65 g-m, Voltage: 15.94 V, Current: 3.47 A, RPM: 15030
+Throttle: 50.00 %, PWM: 1500 us, Thrust: 243.28 g, Torque: -2.10 g-m, Voltage: 15.93 V, Current: 3.45 A, RPM: 14955
+Throttle: 50.00 %, PWM: 1500 us, Thrust: 239.43 g, Torque: -2.45 g-m, Voltage: 15.93 V, Current: 3.42 A, RPM: 14970
+Throttle: 60.00 %, PWM: 1600 us, Thrust: 276.54 g, Torque: -2.65 g-m, Voltage: 15.87 V, Current: 4.58 A, RPM: 16207
+Throttle: 60.00 %, PWM: 1600 us, Thrust: 278.97 g, Torque: -1.94 g-m, Voltage: 15.86 V, Current: 4.61 A, RPM: 16286
+Throttle: 60.00 %, PWM: 1600 us, Thrust: 277.71 g, Torque: -1.90 g-m, Voltage: 15.85 V, Current: 4.57 A, RPM: 16207
+Throttle: 70.00 %, PWM: 1700 us, Thrust: 301.44 g, Torque: -2.39 g-m, Voltage: 15.81 V, Current: 5.61 A, RPM: 16816
+Throttle: 70.00 %, PWM: 1700 us, Thrust: 301.83 g, Torque: -3.28 g-m, Voltage: 15.79 V, Current: 5.68 A, RPM: 16835
+Throttle: 70.00 %, PWM: 1700 us, Thrust: 301.53 g, Torque: -3.54 g-m, Voltage: 15.79 V, Current: 5.63 A, RPM: 16853
+Throttle: 80.00 %, PWM: 1800 us, Thrust: 342.75 g, Torque: -4.75 g-m, Voltage: 15.72 V, Current: 6.95 A, RPM: 17825
+Throttle: 80.00 %, PWM: 1800 us, Thrust: 337.85 g, Torque: -4.58 g-m, Voltage: 15.72 V, Current: 6.78 A, RPM: 17804
+Throttle: 80.00 %, PWM: 1800 us, Thrust: 337.47 g, Torque: -3.29 g-m, Voltage: 15.70 V, Current: 6.87 A, RPM: 17814
+Throttle: 90.00 %, PWM: 1900 us, Thrust: 372.22 g, Torque: -4.64 g-m, Voltage: 15.63 V, Current: 8.52 A, RPM: 18761
+Throttle: 90.00 %, PWM: 1900 us, Thrust: 372.50 g, Torque: -4.54 g-m, Voltage: 15.61 V, Current: 8.49 A, RPM: 18587
+Throttle: 90.00 %, PWM: 1900 us, Thrust: 376.28 g, Torque: -4.56 g-m, Voltage: 15.60 V, Current: 8.67 A, RPM: 18598
+Throttle: 100.00 %, PWM: 2000 us, Thrust: 359.80 g, Torque: -3.38 g-m, Voltage: 15.44 V, Current: 17.84 A, RPM: 15932

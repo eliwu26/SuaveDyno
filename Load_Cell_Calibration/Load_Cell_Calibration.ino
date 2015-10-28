@@ -1,37 +1,103 @@
 /** 
-SuaveDyno Load Cell Calibration
-Elias Wu and Trent Lukaczyk 2015
+Elias Wu and Trent Lukaczyk 
+October 2015
 
-Procedure: 
-Boot up Arduino with this code, start Serial Monitor at 38400 baud, wait for readings, then 
-place known weight on load cell. Divide reading by actual weight to obtain scaling factor
-(The value in set_scale(value))
 **/
 
+// ------------------------------------------------------------------------------
+//   INCLUDES
+// ------------------------------------------------------------------------------
+
+#include <Wire.h>
+#include <Adafruit_ADS1015.h>
 #include <HX711.h>
 #include <Servo.h>
 
-// HX711.DOUT	- pin #A2
-// HX711.PD_SCK	- pin #A3
 
-HX711 scale(A2, A3);		// parameter "gain" is ommited; the default value 128 is used by the library
+// ------------------------------------------------------------------------------
+//   GLOBALS
+// ------------------------------------------------------------------------------
+
+// Scales
+#define SCALE_THRUST_CALIBRATION +461.406f
+//#define SCALE_THRUST_CALIBRATION +1.0f
+//#define SCALE_THRUST_CONSTANT    0.4080f
+#define SCALE_THRUST_CONSTANT    1.0f
+
+#define SCALE_TORQUE_CALIBRATION -1461.036f
+//#define SCALE_TORQUE_CALIBRATION 1.0f
+//#define SCALE_TORQUE_CONSTANT    0.1020f
+#define SCALE_TORQUE_CONSTANT    1.0f
+
+#define SCALE_THRUST_CHANNEL     128
+#define SCALE_TORQUE_CHANNEL     32
+HX711 scale_thrust(A2,A3);
+HX711 scale_torque(A2,A3);
+
+// ------------------------------------------------------------------------------
+//   SETUP
+// ------------------------------------------------------------------------------
 
 void setup() {
-  Serial.begin(38400);
-  Serial.println("HX711 Calibration");
-
-  //First (5kg) load cell calibration
-  scale.set_gain(32);
-  scale.set_scale();
-  scale.tare();	
+    
+  // Run serial interface
+  Serial.begin(38400); 
   
-  //Second (300g) load cell calibration - comment above 3 lines and uncomment following 3 lines.
-//  scale.set_gain(32);
-//  scale.set_scale(-1284.38f);
-//  scale.tare();		
-  Serial.println("Readings:");
+  // Startup
+  Serial.println("Load Cell Calibration");
+  
+  // Set analog pin reference voltage
+  analogReference(DEFAULT);
+  
+  // Scale Initialization
+  tare_scales();
+
+  // Let it soak
+  delay(1000);
+  
 }
+
+
+// ------------------------------------------------------------------------------
+//   LOOP
+// ------------------------------------------------------------------------------
 
 void loop() {
-  Serial.println(scale.get_units(10));
+
+//  scale_thrust.set_gain(SCALE_THRUST_CHANNEL);
+//  Serial.print( scale_thrust.get_units(1) * SCALE_THRUST_CONSTANT );
+
+  scale_torque.set_gain(SCALE_TORQUE_CHANNEL);
+  Serial.print( scale_torque.get_units(1) * SCALE_TORQUE_CONSTANT );
+
+
+  delay(300);
+
+//  // Thrust
+//  Serial.print("Thrust: ");
+//  scale_thrust.set_gain(SCALE_THRUST_CHANNEL);
+//  Serial.print( scale_thrust.get_units(1) * SCALE_THRUST_CONSTANT );
+//  Serial.print(" g, ");
+//  
+//  // Torque
+//  Serial.print("Torque: ");
+//  scale_torque.set_gain(SCALE_TORQUE_CHANNEL);
+//  Serial.print( scale_torque.get_units(1) * SCALE_TORQUE_CONSTANT );
+//  Serial.print(" g-m, ");
+
+  Serial.println();
+      
 }
+
+
+// Tare Scales
+void tare_scales() {
+  scale_thrust.set_gain (SCALE_THRUST_CHANNEL);
+  scale_thrust.set_scale(SCALE_THRUST_CALIBRATION);
+  scale_thrust.tare();  
+  scale_torque.set_gain (SCALE_TORQUE_CHANNEL);
+  scale_torque.set_scale(SCALE_TORQUE_CALIBRATION);
+  scale_torque.tare();
+}
+
+

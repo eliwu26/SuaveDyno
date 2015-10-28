@@ -1,0 +1,64 @@
+Date: October 24, 2015
+Motor: T-Motor 4004 300kV
+Battery: Tunigy 2200mAh 4s
+ESC: T-Motor 20A
+Prop: 
+    Name: None
+    Diameter: 0.0 in
+    Pitch: 0.0 in
+
+Throttle: 0.00 %, PWM: 1000 us, Thrust: -0.07 g, Torque: 0.00 g-m, Voltage: 16.41 V, Current: 0.04 A, RPM: 0
+Throttle: 0.00 %, PWM: 1000 us, Thrust: 0.49 g, Torque: 0.00 g-m, Voltage: 16.41 V, Current: 0.04 A, RPM: 0
+Throttle: 0.00 %, PWM: 1000 us, Thrust: -0.07 g, Torque: 0.00 g-m, Voltage: 16.41 V, Current: 0.04 A, RPM: 0
+Throttle: 0.00 %, PWM: 1000 us, Thrust: -0.22 g, Torque: -0.00 g-m, Voltage: 16.41 V, Current: 0.04 A, RPM: 0
+Throttle: 0.00 %, PWM: 1000 us, Thrust: 0.00 g, Torque: -0.00 g-m, Voltage: 16.41 V, Current: 0.04 A, RPM: 0
+Throttle: 10.00 %, PWM: 1100 us, Thrust: -0.05 g, Torque: -0.22 g-m, Voltage: 16.41 V, Current: 0.04 A, RPM: 980
+Throttle: 10.00 %, PWM: 1100 us, Thrust: 0.03 g, Torque: -0.22 g-m, Voltage: 16.41 V, Current: 0.04 A, RPM: 981
+Throttle: 10.00 %, PWM: 1100 us, Thrust: 0.06 g, Torque: -0.22 g-m, Voltage: 16.41 V, Current: 0.04 A, RPM: 981
+Throttle: 10.00 %, PWM: 1100 us, Thrust: 0.00 g, Torque: -0.22 g-m, Voltage: 16.41 V, Current: 0.03 A, RPM: 987
+Throttle: 10.00 %, PWM: 1100 us, Thrust: -0.01 g, Torque: -0.21 g-m, Voltage: 16.41 V, Current: 0.04 A, RPM: 982
+Throttle: 20.00 %, PWM: 1200 us, Thrust: 0.01 g, Torque: -0.23 g-m, Voltage: 16.41 V, Current: 0.04 A, RPM: 2114
+Throttle: 20.00 %, PWM: 1200 us, Thrust: -0.04 g, Torque: -0.23 g-m, Voltage: 16.41 V, Current: 0.04 A, RPM: 2113
+Throttle: 20.00 %, PWM: 1200 us, Thrust: -0.00 g, Torque: -0.22 g-m, Voltage: 16.41 V, Current: 0.03 A, RPM: 2114
+Throttle: 20.00 %, PWM: 1200 us, Thrust: -0.02 g, Torque: -0.23 g-m, Voltage: 16.41 V, Current: 0.03 A, RPM: 2116
+Throttle: 20.00 %, PWM: 1200 us, Thrust: -0.08 g, Torque: -0.23 g-m, Voltage: 16.41 V, Current: 0.04 A, RPM: 2116
+Throttle: 30.00 %, PWM: 1300 us, Thrust: -0.03 g, Torque: -0.22 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 2953
+Throttle: 30.00 %, PWM: 1300 us, Thrust: -0.00 g, Torque: -0.22 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 2954
+Throttle: 30.00 %, PWM: 1300 us, Thrust: -0.08 g, Torque: -0.22 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 2953
+Throttle: 30.00 %, PWM: 1300 us, Thrust: -0.09 g, Torque: -0.22 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 2952
+Throttle: 30.00 %, PWM: 1300 us, Thrust: -0.07 g, Torque: -0.22 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 2954
+Throttle: 40.00 %, PWM: 1400 us, Thrust: -0.02 g, Torque: -0.22 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 3610
+Throttle: 40.00 %, PWM: 1400 us, Thrust: -0.01 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 3609
+Throttle: 40.00 %, PWM: 1400 us, Thrust: 0.08 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 3604
+Throttle: 40.00 %, PWM: 1400 us, Thrust: 0.02 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 3605
+Throttle: 40.00 %, PWM: 1400 us, Thrust: 0.04 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 3594
+Throttle: 50.00 %, PWM: 1500 us, Thrust: 0.05 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4030
+Throttle: 50.00 %, PWM: 1500 us, Thrust: 0.10 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4030
+Throttle: 50.00 %, PWM: 1500 us, Thrust: 0.03 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4023
+Throttle: 50.00 %, PWM: 1500 us, Thrust: 0.03 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4031
+Throttle: 50.00 %, PWM: 1500 us, Thrust: 0.05 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4031
+Throttle: 60.00 %, PWM: 1600 us, Thrust: 0.02 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4332
+Throttle: 60.00 %, PWM: 1600 us, Thrust: 0.08 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4335
+Throttle: 60.00 %, PWM: 1600 us, Thrust: 0.13 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4327
+Throttle: 60.00 %, PWM: 1600 us, Thrust: 0.05 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4332
+Throttle: 60.00 %, PWM: 1600 us, Thrust: 0.04 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4325
+Throttle: 70.00 %, PWM: 1700 us, Thrust: 0.02 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4575
+Throttle: 70.00 %, PWM: 1700 us, Thrust: -0.00 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4574
+Throttle: 70.00 %, PWM: 1700 us, Thrust: -0.02 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4571
+Throttle: 70.00 %, PWM: 1700 us, Thrust: 0.06 g, Torque: -0.22 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4571
+Throttle: 70.00 %, PWM: 1700 us, Thrust: 0.02 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4581
+Throttle: 80.00 %, PWM: 1800 us, Thrust: 0.03 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4780
+Throttle: 80.00 %, PWM: 1800 us, Thrust: 0.02 g, Torque: -0.22 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4781
+Throttle: 80.00 %, PWM: 1800 us, Thrust: 0.02 g, Torque: -0.22 g-m, Voltage: 16.39 V, Current: 0.03 A, RPM: 4766
+Throttle: 80.00 %, PWM: 1800 us, Thrust: 0.03 g, Torque: -0.22 g-m, Voltage: 16.39 V, Current: 0.03 A, RPM: 4770
+Throttle: 80.00 %, PWM: 1800 us, Thrust: 0.05 g, Torque: -0.21 g-m, Voltage: 16.40 V, Current: 0.03 A, RPM: 4780
+Throttle: 90.00 %, PWM: 1900 us, Thrust: 0.01 g, Torque: -0.22 g-m, Voltage: 16.39 V, Current: 0.03 A, RPM: 5026
+Throttle: 90.00 %, PWM: 1900 us, Thrust: 0.03 g, Torque: -0.22 g-m, Voltage: 16.39 V, Current: 0.03 A, RPM: 5026
+Throttle: 90.00 %, PWM: 1900 us, Thrust: 0.14 g, Torque: -0.22 g-m, Voltage: 16.39 V, Current: 0.03 A, RPM: 5025
+Throttle: 90.00 %, PWM: 1900 us, Thrust: -0.06 g, Torque: -0.22 g-m, Voltage: 16.39 V, Current: 0.03 A, RPM: 5026
+Throttle: 90.00 %, PWM: 1900 us, Thrust: -0.04 g, Torque: -0.21 g-m, Voltage: 16.39 V, Current: 0.03 A, RPM: 5024
+Throttle: 100.00 %, PWM: 2000 us, Thrust: -0.02 g, Torque: -0.22 g-m, Voltage: 16.39 V, Current: 0.03 A, RPM: 5366
+Throttle: 100.00 %, PWM: 2000 us, Thrust: 0.03 g, Torque: -0.22 g-m, Voltage: 16.39 V, Current: 0.03 A, RPM: 5376
+Throttle: 100.00 %, PWM: 2000 us, Thrust: -0.04 g, Torque: -0.22 g-m, Voltage: 16.39 V, Current: 0.03 A, RPM: 5364
+Throttle: 100.00 %, PWM: 2000 us, Thrust: -0.08 g, Torque: -0.22 g-m, Voltage: 16.39 V, Current: 0.03 A, RPM: 5364
+Throttle: 100.00 %, PWM: 2000 us, Thrust: -0.01 g, Torque: -0.22 g-m, Voltage: 16.39 V, Current: 0.03 A, RPM: 5376

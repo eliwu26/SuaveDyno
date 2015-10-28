@@ -1,0 +1,64 @@
+Date: October 11, 2015
+Motor: ECO Motor 2204
+Battery: Tunigy 2200mAh 4s
+ESC: Rotor Geeks 12A
+Prop: 
+    Name: GemFan 5040
+    Diameter: 5.0 in
+    Pitch: 4.0 in
+    
+Thrust: 0.11g, Torque: -0.01g-m, Voltage: 14.79V, Current: -0.20A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: 0.09g, Torque: 0.00g-m, Voltage: 14.71V, Current: -0.16A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: 0.04g, Torque: 0.00g-m, Voltage: 14.75V, Current: -0.11A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: 0.09g, Torque: -0.00g-m, Voltage: 14.75V, Current: -0.16A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: 0.07g, Torque: -0.01g-m, Voltage: 14.79V, Current: -0.16A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: 21.63g, Torque: 0.22g-m, Voltage: 14.71V, Current: -0.11A, PWM: 1050, Throttle: 10.00%, RPM: 19120
+Thrust: 22.10g, Torque: 0.24g-m, Voltage: 14.79V, Current: -0.16A, PWM: 1050, Throttle: 10.00%, RPM: 18891
+Thrust: 22.17g, Torque: 0.24g-m, Voltage: 14.75V, Current: -0.11A, PWM: 1050, Throttle: 10.00%, RPM: 18909
+Thrust: 22.35g, Torque: 0.28g-m, Voltage: 14.75V, Current: -0.11A, PWM: 1050, Throttle: 10.00%, RPM: 18957
+Thrust: 22.41g, Torque: 0.21g-m, Voltage: 14.75V, Current: -0.11A, PWM: 1050, Throttle: 10.00%, RPM: 15568
+Thrust: 84.50g, Torque: -0.29g-m, Voltage: 14.71V, Current: 0.27A, PWM: 1150, Throttle: 20.00%, RPM: 26761
+Thrust: 84.35g, Torque: -0.27g-m, Voltage: 14.71V, Current: 0.27A, PWM: 1150, Throttle: 20.00%, RPM: 20491
+Thrust: 84.14g, Torque: -0.06g-m, Voltage: 14.79V, Current: 0.17A, PWM: 1150, Throttle: 20.00%, RPM: 32310
+Thrust: 83.56g, Torque: -0.22g-m, Voltage: 14.75V, Current: 0.22A, PWM: 1150, Throttle: 20.00%, RPM: 20519
+Thrust: 83.37g, Torque: -0.29g-m, Voltage: 14.71V, Current: 0.22A, PWM: 1150, Throttle: 20.00%, RPM: 32206
+Thrust: 140.74g, Torque: -0.07g-m, Voltage: 14.75V, Current: 1.06A, PWM: 1250, Throttle: 30.00%, RPM: 34403
+Thrust: 139.79g, Torque: -0.62g-m, Voltage: 14.79V, Current: 1.02A, PWM: 1250, Throttle: 30.00%, RPM: 42342
+Thrust: 138.67g, Torque: -0.72g-m, Voltage: 14.75V, Current: 0.97A, PWM: 1250, Throttle: 30.00%, RPM: 36210
+Thrust: 138.95g, Torque: -0.33g-m, Voltage: 14.75V, Current: 1.06A, PWM: 1250, Throttle: 30.00%, RPM: 26536
+Thrust: 139.33g, Torque: -0.60g-m, Voltage: 14.75V, Current: 1.11A, PWM: 1250, Throttle: 30.00%, RPM: 42105
+Thrust: 202.59g, Torque: -1.56g-m, Voltage: 14.71V, Current: 2.38A, PWM: 1350, Throttle: 40.00%, RPM: 31948
+Thrust: 201.67g, Torque: -2.30g-m, Voltage: 14.71V, Current: 2.19A, PWM: 1350, Throttle: 40.00%, RPM: 51150
+Thrust: 200.89g, Torque: -2.05g-m, Voltage: 14.75V, Current: 2.33A, PWM: 1350, Throttle: 40.00%, RPM: 41465
+Thrust: 201.18g, Torque: -2.03g-m, Voltage: 14.71V, Current: 2.24A, PWM: 1350, Throttle: 40.00%, RPM: 50933
+Thrust: 200.62g, Torque: -2.06g-m, Voltage: 14.75V, Current: 2.28A, PWM: 1350, Throttle: 40.00%, RPM: 51903
+Thrust: 259.76g, Torque: -2.70g-m, Voltage: 14.71V, Current: 3.08A, PWM: 1450, Throttle: 50.00%, RPM: 57416
+Thrust: 258.43g, Torque: -2.48g-m, Voltage: 14.75V, Current: 3.18A, PWM: 1450, Throttle: 50.00%, RPM: 57636
+Thrust: 258.03g, Torque: -2.96g-m, Voltage: 14.71V, Current: 3.08A, PWM: 1450, Throttle: 50.00%, RPM: 60790
+Thrust: 257.27g, Torque: -2.88g-m, Voltage: 14.75V, Current: 3.18A, PWM: 1450, Throttle: 50.00%, RPM: 57581
+Thrust: 257.57g, Torque: -2.78g-m, Voltage: 14.71V, Current: 3.18A, PWM: 1450, Throttle: 50.00%, RPM: 35820
+Thrust: 314.87g, Torque: -3.17g-m, Voltage: 14.79V, Current: 4.54A, PWM: 1550, Throttle: 60.00%, RPM: 63224
+Thrust: 312.45g, Torque: -3.61g-m, Voltage: 14.71V, Current: 4.49A, PWM: 1550, Throttle: 60.00%, RPM: 39190
+Thrust: 311.14g, Torque: -2.91g-m, Voltage: 14.79V, Current: 4.21A, PWM: 1550, Throttle: 60.00%, RPM: 62695
+Thrust: 312.91g, Torque: -3.05g-m, Voltage: 14.75V, Current: 4.26A, PWM: 1550, Throttle: 60.00%, RPM: 398
+Thrust: 312.56g, Torque: -3.03g-m, Voltage: 14.71V, Current: 4.54A, PWM: 1550, Throttle: 60.00%, RPM: 62761
+Thrust: 375.22g, Torque: -3.70g-m, Voltage: 14.67V, Current: 5.85A, PWM: 1650, Throttle: 70.00%, RPM: 3113
+Thrust: 375.69g, Torque: -3.88g-m, Voltage: 14.67V, Current: 6.04A, PWM: 1650, Throttle: 70.00%, RPM: 42313
+Thrust: 375.89g, Torque: -4.31g-m, Voltage: 14.71V, Current: 6.04A, PWM: 1650, Throttle: 70.00%, RPM: 57361
+Thrust: 378.51g, Torque: -4.35g-m, Voltage: 14.79V, Current: 5.99A, PWM: 1650, Throttle: 70.00%, RPM: 42134
+Thrust: 374.51g, Torque: -3.80g-m, Voltage: 14.71V, Current: 5.90A, PWM: 1650, Throttle: 70.00%, RPM: 2801
+Thrust: 451.28g, Torque: -2.12g-m, Voltage: 14.79V, Current: 7.68A, PWM: 1750, Throttle: 80.00%, RPM: 46403
+Thrust: 452.29g, Torque: -2.54g-m, Voltage: 14.79V, Current: 7.59A, PWM: 1750, Throttle: 80.00%, RPM: 13204
+Thrust: 450.90g, Torque: -2.40g-m, Voltage: 14.63V, Current: 7.68A, PWM: 1750, Throttle: 80.00%, RPM: 12998
+Thrust: 450.33g, Torque: -3.12g-m, Voltage: 14.75V, Current: 7.68A, PWM: 1750, Throttle: 80.00%, RPM: 9651
+Thrust: 449.82g, Torque: -3.37g-m, Voltage: 14.67V, Current: 7.59A, PWM: 1750, Throttle: 80.00%, RPM: 12487
+Thrust: 553.29g, Torque: -5.58g-m, Voltage: 14.63V, Current: 9.23A, PWM: 1850, Throttle: 90.00%, RPM: 21044
+Thrust: 552.31g, Torque: -5.78g-m, Voltage: 14.59V, Current: 9.65A, PWM: 1850, Throttle: 90.00%, RPM: 17336
+Thrust: 546.25g, Torque: -5.50g-m, Voltage: 14.67V, Current: 9.84A, PWM: 1850, Throttle: 90.00%, RPM: 16994
+Thrust: 544.23g, Torque: -5.50g-m, Voltage: 14.67V, Current: 9.61A, PWM: 1850, Throttle: 90.00%, RPM: 22216
+Thrust: 542.63g, Torque: -5.15g-m, Voltage: 14.63V, Current: 9.47A, PWM: 1850, Throttle: 90.00%, RPM: 17222
+Thrust: 588.03g, Torque: -5.62g-m, Voltage: 14.67V, Current: 10.45A, PWM: 1950, Throttle: 100.00%, RPM: 22959
+Thrust: 585.33g, Torque: -4.48g-m, Voltage: 14.67V, Current: 10.31A, PWM: 1950, Throttle: 100.00%, RPM: 21673
+Thrust: 579.80g, Torque: -4.36g-m, Voltage: 14.59V, Current: 10.27A, PWM: 1950, Throttle: 100.00%, RPM: 23484
+Thrust: 578.67g, Torque: -4.87g-m, Voltage: 14.55V, Current: 10.36A, PWM: 1950, Throttle: 100.00%, RPM: 2801
+Thrust: 575.94g, Torque: -4.23g-m, Voltage: 14.59V, Current: 10.31A, PWM: 1950, Throttle: 100.00%, RPM: 23617

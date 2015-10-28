@@ -38,7 +38,7 @@ advance ratio (normalizes rpm and forward flight)
 
 def main():
     
-    foldername = 'test_data'
+    foldername = 'test_data/sess08'
     filenames = glob.glob(foldername + '/*.txt')
     
     for filename in filenames:
@@ -61,17 +61,28 @@ def process_data(data):
     T   = data.mean.Thrust
     Q   = data.mean.Torque
     I   = data.mean.Current
-    V   = data.mean.Voltage
+    V   = data.mean.Voltage 
+
+    ## feathering low-current data
+    #low_current_threshold = 0.8
+    #i_curr = np.argmax(I>low_current_threshold)
+    #if i_curr > 0:
+        #a = (I[i_curr]-I[0])/rpm[i_curr]**3.5
+        #I[0:i_curr] = a*rpm[0:i_curr]**3.5 + I[0]
 
     dia = data.meta.Prop.Diameter
     dia,dia_units = [a.strip() for a in dia.split()]
     dia = float(dia)
     
     # units to SI
-    T = T * Units[data.meta.Units['Thrust']] * 9.81
+    T = T * Units[data.meta.Units['Thrust']]
+    if 'g' in data.meta.Units['Thrust']:
+        T *= 9.81
     
     torq_units = data.meta.Units['Torque'].split('-')
-    Q = Q * Units[torq_units[0]] * Units[torq_units[1]] * 9.81
+    Q = Q * Units[torq_units[0]] * Units[torq_units[1]]
+    if 'g' in torq_units[0]:
+        Q *= 9.81
     
     I = I * Units[data.meta.Units['Current']]
     V = V * Units[data.meta.Units['Voltage']]
@@ -86,7 +97,8 @@ def process_data(data):
     
     P_E = V * I
     P_S = Q * omega
-    P_A = T * np.sqrt(T/A * 0.5 / rho)
+    #P_A = T * np.sqrt(T/A * 0.5 / rho)
+    P_A = ( T**3. / (4.*rho*A) ) ** 0.5
     P_A[omega==0] = 0
     
     eff_shaft = P_S / P_E * 100.    
@@ -206,7 +218,7 @@ def plot_data(data):
     ax1.plot(thr, rpm, 'ko-')
     
     plt.xlim([-5,105])    
-    plt.ylim([0,10000])
+    plt.ylim([0, max(10000,np.max(rpm))])
 
     ax1.set_ylabel('RPM')
     ax1.set_title('Batt: %s, ESC: %s, \nMotor: %s, Prop: %s' % (bat,esc,mot,prp))
@@ -217,7 +229,7 @@ def plot_data(data):
     ax1.plot(thr, T, 'bo-')
         
     plt.xlim([-5,105])    
-    plt.ylim([0,1200.])
+    plt.ylim([0,2000.])
     
     ax1.set_ylabel('Thrust (%s)' % data.meta.Units['Thrust'], color='b')    
     for tl in ax1.get_yticklabels():
@@ -230,7 +242,7 @@ def plot_data(data):
     ax2.set_ylabel('Torque (%s)' % data.meta.Units['Torque'], color='r')
     
     plt.xlim([-5,105])      
-    plt.ylim([0,20])    
+    plt.ylim([0,45])    
     
     for tl in ax2.get_yticklabels():
         tl.set_color('r')
@@ -241,7 +253,7 @@ def plot_data(data):
     ax1.plot(thr, V, 'bo-')
     
     plt.xlim([-5,105])      
-    plt.ylim([10.8,15.6])            
+    plt.ylim([14.0,17.0])            
     
     ax1.set_ylabel('Voltage (V)', color='b')
     for tl in ax1.get_yticklabels():

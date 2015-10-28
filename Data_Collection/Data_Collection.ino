@@ -36,18 +36,18 @@ for the low PWM, push the arming switch again.
 #define N_SENSOR_SAMPLES   5    // number of samples per step
 
 // Scales
-#define SCALE_THRUST_CALIBRATION -419.66f
-#define SCALE_TORQUE_CALIBRATION -1256.36f
-#define SCALE_THRUST_CONSTANT    0.407747f
-#define SCALE_TORQUE_CONSTANT    0.1019f
+#define SCALE_THRUST_CALIBRATION +461.406f
+#define SCALE_TORQUE_CALIBRATION -1461.036f
+#define SCALE_THRUST_CONSTANT    0.4080f
+#define SCALE_TORQUE_CONSTANT    0.1020f
 #define SCALE_THRUST_CHANNEL     128
 #define SCALE_TORQUE_CHANNEL     32
 HX711 scale_thrust(A2,A3);
 HX711 scale_torque(A2,A3);
 
 // ADC for Battery Voltage and Current
-#define VOLTAGE_CONSTANT 0.00190263
-#define CURRENT_CONSTANT 0.003237
+#define VOLTAGE_CONSTANT 0.002955
+#define CURRENT_CONSTANT 0.010535
 Adafruit_ADS1115 adc_battery;
 double Vcc;
 
@@ -117,9 +117,14 @@ void setup() {
   }
   
   // Startup complete
-  digitalWrite(pin_startstop_status,1); 
-  delay(1000);
-  digitalWrite(pin_startstop_status,0);
+  for(int i = 0; i < 5; i ++){ 
+    digitalWrite(pin_startstop_status,1);
+    delay(50);
+    digitalWrite(pin_startstop_status,0);
+    delay(50);
+  }
+  analogWrite(pin_startstop_status,0);
+  Serial.println();
   Serial.println("Done!");
   
   // Here we go!

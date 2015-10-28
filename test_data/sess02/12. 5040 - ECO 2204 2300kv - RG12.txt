@@ -1,0 +1,64 @@
+Date: October 11, 2015
+Motor: ECO Motor 2204
+Battery: Tunigy 2200mAh 4s
+ESC: Rotor Geeks 12A
+Prop: 
+    Name: GemFan 5040
+    Diameter: 5.0 in
+    Pitch: 4.0 in
+
+Thrust: 0.00g, Torque: 0.00g-m, Voltage: 14.83V, Current: -0.16A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: 0.09g, Torque: 0.01g-m, Voltage: 14.71V, Current: -0.11A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: 0.02g, Torque: -1.12g-m, Voltage: 14.75V, Current: -0.11A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: -1.19g, Torque: 0.86g-m, Voltage: 14.79V, Current: -0.11A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: -1.04g, Torque: 0.85g-m, Voltage: 14.75V, Current: -0.16A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: 5.84g, Torque: 0.91g-m, Voltage: 14.75V, Current: -0.06A, PWM: 1050, Throttle: 10.00%, RPM: 25305
+Thrust: 5.83g, Torque: 0.96g-m, Voltage: 14.79V, Current: -0.11A, PWM: 1050, Throttle: 10.00%, RPM: 42183
+Thrust: 5.71g, Torque: 0.97g-m, Voltage: 14.75V, Current: -0.11A, PWM: 1050, Throttle: 10.00%, RPM: 6914
+Thrust: 5.86g, Torque: 0.93g-m, Voltage: 14.79V, Current: -0.11A, PWM: 1050, Throttle: 10.00%, RPM: 31282
+Thrust: 5.84g, Torque: 0.91g-m, Voltage: 14.75V, Current: -0.16A, PWM: 1050, Throttle: 10.00%, RPM: 34966
+Thrust: 63.28g, Torque: 1.12g-m, Voltage: 14.75V, Current: 0.22A, PWM: 1150, Throttle: 20.00%, RPM: 22701
+Thrust: 62.84g, Torque: 0.91g-m, Voltage: 14.71V, Current: 0.27A, PWM: 1150, Throttle: 20.00%, RPM: 37974
+Thrust: 63.12g, Torque: 0.94g-m, Voltage: 14.79V, Current: 0.22A, PWM: 1150, Throttle: 20.00%, RPM: 22598
+Thrust: 63.32g, Torque: 0.90g-m, Voltage: 14.79V, Current: 0.27A, PWM: 1150, Throttle: 20.00%, RPM: 22641
+Thrust: 63.57g, Torque: 0.91g-m, Voltage: 14.71V, Current: 0.31A, PWM: 1150, Throttle: 20.00%, RPM: 26749
+Thrust: 120.44g, Torque: 0.85g-m, Voltage: 14.63V, Current: 0.83A, PWM: 1250, Throttle: 30.00%, RPM: 31380
+Thrust: 119.89g, Torque: 1.36g-m, Voltage: 14.75V, Current: 0.64A, PWM: 1250, Throttle: 30.00%, RPM: 20739
+Thrust: 120.41g, Torque: 1.23g-m, Voltage: 14.79V, Current: 0.59A, PWM: 1250, Throttle: 30.00%, RPM: 20661
+Thrust: 119.83g, Torque: 1.07g-m, Voltage: 14.75V, Current: 0.64A, PWM: 1250, Throttle: 30.00%, RPM: 31380
+Thrust: 119.49g, Torque: 1.67g-m, Voltage: 14.71V, Current: 0.69A, PWM: 1250, Throttle: 30.00%, RPM: 20790
+Thrust: 180.23g, Torque: 2.09g-m, Voltage: 14.75V, Current: 1.44A, PWM: 1350, Throttle: 40.00%, RPM: 30211
+Thrust: 179.49g, Torque: 2.49g-m, Voltage: 14.75V, Current: 1.58A, PWM: 1350, Throttle: 40.00%, RPM: 50209
+Thrust: 178.56g, Torque: 2.81g-m, Voltage: 14.75V, Current: 1.63A, PWM: 1350, Throttle: 40.00%, RPM: 30349
+Thrust: 178.56g, Torque: 2.24g-m, Voltage: 14.75V, Current: 1.63A, PWM: 1350, Throttle: 40.00%, RPM: 50505
+Thrust: 179.07g, Torque: 2.24g-m, Voltage: 14.79V, Current: 1.49A, PWM: 1350, Throttle: 40.00%, RPM: 30379
+Thrust: 235.45g, Torque: 3.13g-m, Voltage: 14.59V, Current: 2.33A, PWM: 1450, Throttle: 50.00%, RPM: 44576
+Thrust: 234.57g, Torque: 3.09g-m, Voltage: 14.79V, Current: 2.75A, PWM: 1450, Throttle: 50.00%, RPM: 42372
+Thrust: 234.87g, Torque: 2.99g-m, Voltage: 14.71V, Current: 2.66A, PWM: 1450, Throttle: 50.00%, RPM: 20006
+Thrust: 234.76g, Torque: 2.90g-m, Voltage: 14.71V, Current: 2.94A, PWM: 1450, Throttle: 50.00%, RPM: 44247
+Thrust: 235.09g, Torque: 3.03g-m, Voltage: 14.71V, Current: 2.71A, PWM: 1450, Throttle: 50.00%, RPM: 19461
+Thrust: 287.26g, Torque: 3.15g-m, Voltage: 14.71V, Current: 3.93A, PWM: 1550, Throttle: 60.00%, RPM: 16107
+Thrust: 289.43g, Torque: 4.01g-m, Voltage: 14.71V, Current: 3.69A, PWM: 1550, Throttle: 60.00%, RPM: 23923
+Thrust: 288.56g, Torque: 4.41g-m, Voltage: 14.87V, Current: 3.83A, PWM: 1550, Throttle: 60.00%, RPM: 21551
+Thrust: 286.65g, Torque: 4.64g-m, Voltage: 14.75V, Current: 3.93A, PWM: 1550, Throttle: 60.00%, RPM: 21574
+Thrust: 287.88g, Torque: 4.22g-m, Voltage: 14.75V, Current: 3.97A, PWM: 1550, Throttle: 60.00%, RPM: 32310
+Thrust: 336.79g, Torque: 3.35g-m, Voltage: 14.71V, Current: 5.10A, PWM: 1650, Throttle: 70.00%, RPM: 34822
+Thrust: 335.26g, Torque: 2.99g-m, Voltage: 14.71V, Current: 5.15A, PWM: 1650, Throttle: 70.00%, RPM: 34602
+Thrust: 335.89g, Torque: 3.40g-m, Voltage: 14.71V, Current: 5.10A, PWM: 1650, Throttle: 70.00%, RPM: 34662
+Thrust: 335.35g, Torque: 3.71g-m, Voltage: 14.71V, Current: 5.15A, PWM: 1650, Throttle: 70.00%, RPM: 3113
+Thrust: 336.22g, Torque: 3.75g-m, Voltage: 14.71V, Current: 5.10A, PWM: 1650, Throttle: 70.00%, RPM: 30120
+Thrust: 396.80g, Torque: 3.99g-m, Voltage: 14.59V, Current: 6.56A, PWM: 1750, Throttle: 80.00%, RPM: 62047
+Thrust: 396.57g, Torque: 4.58g-m, Voltage: 14.75V, Current: 6.65A, PWM: 1750, Throttle: 80.00%, RPM: 37878
+Thrust: 397.30g, Torque: 4.26g-m, Voltage: 14.71V, Current: 6.60A, PWM: 1750, Throttle: 80.00%, RPM: 37664
+Thrust: 396.59g, Torque: 4.45g-m, Voltage: 14.67V, Current: 6.60A, PWM: 1750, Throttle: 80.00%, RPM: 9557
+Thrust: 396.68g, Torque: 4.47g-m, Voltage: 14.67V, Current: 6.56A, PWM: 1750, Throttle: 80.00%, RPM: 37807
+Thrust: 476.33g, Torque: 3.79g-m, Voltage: 14.63V, Current: 8.20A, PWM: 1850, Throttle: 90.00%, RPM: 27637
+Thrust: 470.31g, Torque: 3.84g-m, Voltage: 14.67V, Current: 8.57A, PWM: 1850, Throttle: 90.00%, RPM: 27573
+Thrust: 471.48g, Torque: 3.63g-m, Voltage: 14.67V, Current: 8.25A, PWM: 1850, Throttle: 90.00%, RPM: 27497
+Thrust: 469.05g, Torque: 2.02g-m, Voltage: 14.67V, Current: 8.34A, PWM: 1850, Throttle: 90.00%, RPM: 40677
+Thrust: 474.88g, Torque: 2.36g-m, Voltage: 14.67V, Current: 8.20A, PWM: 1850, Throttle: 90.00%, RPM: 20562
+Thrust: 576.50g, Torque: -2.92g-m, Voltage: 14.59V, Current: 10.17A, PWM: 1950, Throttle: 100.00%, RPM: 23617
+Thrust: 570.81g, Torque: -3.06g-m, Voltage: 14.63V, Current: 10.12A, PWM: 1950, Throttle: 100.00%, RPM: 25373
+Thrust: 569.72g, Torque: -1.99g-m, Voltage: 14.59V, Current: 9.89A, PWM: 1950, Throttle: 100.00%, RPM: 36363
+Thrust: 571.74g, Torque: -2.64g-m, Voltage: 14.71V, Current: 10.08A, PWM: 1950, Throttle: 100.00%, RPM: 50743
+Thrust: 568.18g, Torque: -2.43g-m, Voltage: 14.67V, Current: 10.08A, PWM: 1950, Throttle: 100.00%, RPM: 20178

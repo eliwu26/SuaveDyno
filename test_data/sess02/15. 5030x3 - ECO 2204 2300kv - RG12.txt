@@ -1,0 +1,64 @@
+Date: October 11, 2015
+Motor: ECO Motor 2204
+Battery: Tunigy 2200mAh 4s
+ESC: Rotor Geeks 12A
+Prop: 
+    Name: HQProp 5030 3-Blade
+    Diameter: 5.0 in
+    Pitch: 3.0 in
+
+Thrust: -0.05g, Torque: -0.01g-m, Voltage: 14.71V, Current: -0.16A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: -0.00g, Torque: -0.01g-m, Voltage: 14.75V, Current: -0.16A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: 0.01g, Torque: -0.02g-m, Voltage: 14.75V, Current: -0.16A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: -0.02g, Torque: -0.03g-m, Voltage: 14.75V, Current: -0.16A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: 0.00g, Torque: -0.04g-m, Voltage: 14.71V, Current: -0.11A, PWM: 950, Throttle: 0.00%, RPM: 0
+Thrust: -8.74g, Torque: -0.00g-m, Voltage: 14.75V, Current: -0.16A, PWM: 1050, Throttle: 10.00%, RPM: 4824
+Thrust: -8.85g, Torque: 0.03g-m, Voltage: 14.79V, Current: -0.16A, PWM: 1050, Throttle: 10.00%, RPM: 9693
+Thrust: -8.67g, Torque: 0.05g-m, Voltage: 14.75V, Current: -0.16A, PWM: 1050, Throttle: 10.00%, RPM: 4853
+Thrust: -8.83g, Torque: 0.07g-m, Voltage: 14.75V, Current: -0.16A, PWM: 1050, Throttle: 10.00%, RPM: 7563
+Thrust: -8.87g, Torque: 0.01g-m, Voltage: 14.75V, Current: -0.16A, PWM: 1050, Throttle: 10.00%, RPM: 7474
+Thrust: -76.55g, Torque: 1.26g-m, Voltage: 14.79V, Current: 0.08A, PWM: 1150, Throttle: 20.00%, RPM: 13736
+Thrust: -76.26g, Torque: 1.19g-m, Voltage: 14.71V, Current: 0.12A, PWM: 1150, Throttle: 20.00%, RPM: 13723
+Thrust: -76.47g, Torque: 1.30g-m, Voltage: 14.75V, Current: 0.08A, PWM: 1150, Throttle: 20.00%, RPM: 13695
+Thrust: -76.31g, Torque: 1.16g-m, Voltage: 14.83V, Current: 0.08A, PWM: 1150, Throttle: 20.00%, RPM: 21171
+Thrust: -76.29g, Torque: 1.16g-m, Voltage: 14.71V, Current: 0.12A, PWM: 1150, Throttle: 20.00%, RPM: 13651
+Thrust: -145.54g, Torque: 4.35g-m, Voltage: 14.79V, Current: 0.73A, PWM: 1250, Throttle: 30.00%, RPM: 29154
+Thrust: -145.60g, Torque: 4.08g-m, Voltage: 14.79V, Current: 0.83A, PWM: 1250, Throttle: 30.00%, RPM: 33745
+Thrust: -146.15g, Torque: 4.39g-m, Voltage: 14.75V, Current: 0.73A, PWM: 1250, Throttle: 30.00%, RPM: 22034
+Thrust: -146.62g, Torque: 4.41g-m, Voltage: 14.79V, Current: 0.73A, PWM: 1250, Throttle: 30.00%, RPM: 22026
+Thrust: -145.70g, Torque: 4.47g-m, Voltage: 14.75V, Current: 0.78A, PWM: 1250, Throttle: 30.00%, RPM: 18796
+Thrust: -215.95g, Torque: 5.91g-m, Voltage: 14.79V, Current: 1.81A, PWM: 1350, Throttle: 40.00%, RPM: 46153
+Thrust: -217.32g, Torque: 5.69g-m, Voltage: 14.71V, Current: 1.91A, PWM: 1350, Throttle: 40.00%, RPM: 45801
+Thrust: -215.70g, Torque: 5.96g-m, Voltage: 14.75V, Current: 1.86A, PWM: 1350, Throttle: 40.00%, RPM: 59204
+Thrust: -214.64g, Torque: 5.61g-m, Voltage: 14.75V, Current: 1.81A, PWM: 1350, Throttle: 40.00%, RPM: 45801
+Thrust: -215.61g, Torque: 5.51g-m, Voltage: 14.71V, Current: 1.96A, PWM: 1350, Throttle: 40.00%, RPM: 45906
+Thrust: -288.95g, Torque: 6.33g-m, Voltage: 14.75V, Current: 2.85A, PWM: 1450, Throttle: 50.00%, RPM: 52863
+Thrust: -288.43g, Torque: 6.69g-m, Voltage: 14.75V, Current: 2.80A, PWM: 1450, Throttle: 50.00%, RPM: 10221
+Thrust: -288.26g, Torque: 6.85g-m, Voltage: 14.67V, Current: 2.89A, PWM: 1450, Throttle: 50.00%, RPM: 52863
+Thrust: -288.31g, Torque: 6.66g-m, Voltage: 14.79V, Current: 3.04A, PWM: 1450, Throttle: 50.00%, RPM: 52493
+Thrust: -288.81g, Torque: 6.81g-m, Voltage: 14.75V, Current: 2.80A, PWM: 1450, Throttle: 50.00%, RPM: 506
+Thrust: -355.48g, Torque: 7.04g-m, Voltage: 14.63V, Current: 4.35A, PWM: 1550, Throttle: 60.00%, RPM: 58422
+Thrust: -355.27g, Torque: 7.01g-m, Voltage: 14.75V, Current: 4.26A, PWM: 1550, Throttle: 60.00%, RPM: 58593
+Thrust: -351.73g, Torque: 6.90g-m, Voltage: 14.71V, Current: 4.30A, PWM: 1550, Throttle: 60.00%, RPM: 16768
+Thrust: -350.66g, Torque: 7.39g-m, Voltage: 14.63V, Current: 4.16A, PWM: 1550, Throttle: 60.00%, RPM: 16543
+Thrust: -355.37g, Torque: 7.15g-m, Voltage: 14.75V, Current: 4.30A, PWM: 1550, Throttle: 60.00%, RPM: 39868
+Thrust: -420.65g, Torque: 7.89g-m, Voltage: 14.71V, Current: 5.62A, PWM: 1650, Throttle: 70.00%, RPM: 61983
+Thrust: -417.78g, Torque: 8.41g-m, Voltage: 14.71V, Current: 5.85A, PWM: 1650, Throttle: 70.00%, RPM: 63761
+Thrust: -417.64g, Torque: 8.61g-m, Voltage: 14.71V, Current: 5.81A, PWM: 1650, Throttle: 70.00%, RPM: 63559
+Thrust: -412.62g, Torque: 9.08g-m, Voltage: 14.75V, Current: 5.71A, PWM: 1650, Throttle: 70.00%, RPM: 63357
+Thrust: -416.55g, Torque: 9.09g-m, Voltage: 14.71V, Current: 5.85A, PWM: 1650, Throttle: 70.00%, RPM: 47581
+Thrust: -500.91g, Torque: 9.67g-m, Voltage: 14.67V, Current: 7.82A, PWM: 1750, Throttle: 80.00%, RPM: 3035
+Thrust: -499.98g, Torque: 9.13g-m, Voltage: 14.51V, Current: 7.54A, PWM: 1750, Throttle: 80.00%, RPM: 52414
+Thrust: -493.83g, Torque: 9.36g-m, Voltage: 14.71V, Current: 7.82A, PWM: 1750, Throttle: 80.00%, RPM: 48568
+Thrust: -498.35g, Torque: 9.75g-m, Voltage: 14.67V, Current: 7.64A, PWM: 1750, Throttle: 80.00%, RPM: 52956
+Thrust: -496.12g, Torque: 9.46g-m, Voltage: 14.71V, Current: 7.68A, PWM: 1750, Throttle: 80.00%, RPM: 53428
+Thrust: -590.28g, Torque: 10.87g-m, Voltage: 14.55V, Current: 9.33A, PWM: 1850, Throttle: 90.00%, RPM: 50305
+Thrust: -583.87g, Torque: 10.72g-m, Voltage: 14.55V, Current: 9.47A, PWM: 1850, Throttle: 90.00%, RPM: 44153
+Thrust: -582.55g, Torque: 9.00g-m, Voltage: 14.71V, Current: 9.19A, PWM: 1850, Throttle: 90.00%, RPM: 8871
+Thrust: -581.05g, Torque: 9.47g-m, Voltage: 14.67V, Current: 9.33A, PWM: 1850, Throttle: 90.00%, RPM: 8871
+Thrust: -577.79g, Torque: 10.21g-m, Voltage: 14.63V, Current: 9.47A, PWM: 1850, Throttle: 90.00%, RPM: 9557
+Thrust: -694.57g, Torque: 9.18g-m, Voltage: 14.59V, Current: 11.63A, PWM: 1950, Throttle: 100.00%, RPM: 13411
+Thrust: -690.42g, Torque: 8.67g-m, Voltage: 14.63V, Current: 11.53A, PWM: 1950, Throttle: 100.00%, RPM: 25614
+Thrust: -688.67g, Torque: 9.30g-m, Voltage: 14.63V, Current: 11.39A, PWM: 1950, Throttle: 100.00%, RPM: 16655
+Thrust: -675.33g, Torque: 9.40g-m, Voltage: 14.59V, Current: 11.30A, PWM: 1950, Throttle: 100.00%, RPM: 51880
+Thrust: -682.42g, Torque: 10.17g-m, Voltage: 14.63V, Current: 11.16A, PWM: 1950, Throttle: 100.00%, RPM: 24794
