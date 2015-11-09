@@ -82,7 +82,7 @@ int jnk = 0;
 void setup() {
     
   // Run serial interface
-  Serial.begin(38400); 
+  Serial.begin(9600); 
   
   // Startup
   Serial.println("SUAVE Motor Dyno");

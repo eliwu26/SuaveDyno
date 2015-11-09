@@ -1,0 +1,42 @@
+Date: November 8, 2015
+Motor: KDE 2315 2050kv
+Battery: EFuel Power Supply
+ESC: XRotor 40A
+Prop: 
+    Name: HQ 6030
+    Diameter: 6 in
+    Pitch: 3 in
+
+Throttle: 0.00 %, PWM: 1000 us, Thrust: -0.04 g, Torque: 0.00 g-m, Voltage: 21.88 V, Current: 0.05 A, RPM: 0
+Throttle: 0.00 %, PWM: 1000 us, Thrust: -0.02 g, Torque: 0.00 g-m, Voltage: 21.88 V, Current: 0.05 A, RPM: 0
+Throttle: 0.00 %, PWM: 1000 us, Thrust: -0.07 g, Torque: 0.01 g-m, Voltage: 21.88 V, Current: 0.05 A, RPM: 0
+Throttle: 10.00 %, PWM: 1100 us, Thrust: -160.31 g, Torque: -1.46 g-m, Voltage: 21.84 V, Current: 1.40 A, RPM: 11871
+Throttle: 10.00 %, PWM: 1100 us, Thrust: -161.10 g, Torque: -1.46 g-m, Voltage: 21.84 V, Current: 1.40 A, RPM: 11862
+Throttle: 10.00 %, PWM: 1100 us, Thrust: -161.66 g, Torque: -1.47 g-m, Voltage: 21.84 V, Current: 1.41 A, RPM: 11815
+Throttle: 20.00 %, PWM: 1200 us, Thrust: -376.25 g, Torque: -3.10 g-m, Voltage: 21.78 V, Current: 3.41 A, RPM: 17636
+Throttle: 20.00 %, PWM: 1200 us, Thrust: -376.43 g, Torque: -3.09 g-m, Voltage: 21.78 V, Current: 3.43 A, RPM: 17626
+Throttle: 20.00 %, PWM: 1200 us, Thrust: -381.22 g, Torque: -3.09 g-m, Voltage: 21.78 V, Current: 3.42 A, RPM: 17804
+Throttle: 30.00 %, PWM: 1300 us, Thrust: -575.56 g, Torque: -4.74 g-m, Voltage: 21.72 V, Current: 6.97 A, RPM: 21582
+Throttle: 30.00 %, PWM: 1300 us, Thrust: -586.33 g, Torque: -4.82 g-m, Voltage: 21.72 V, Current: 7.01 A, RPM: 21582
+Throttle: 30.00 %, PWM: 1300 us, Thrust: -582.48 g, Torque: -4.77 g-m, Voltage: 21.72 V, Current: 7.02 A, RPM: 21786
+Throttle: 40.00 %, PWM: 1400 us, Thrust: -777.49 g, Torque: -6.30 g-m, Voltage: 21.66 V, Current: 10.64 A, RPM: 24489
+Throttle: 40.00 %, PWM: 1400 us, Thrust: -770.23 g, Torque: -6.29 g-m, Voltage: 21.65 V, Current: 10.69 A, RPM: 24252
+Throttle: 40.00 %, PWM: 1400 us, Thrust: -767.64 g, Torque: -6.26 g-m, Voltage: 21.65 V, Current: 10.68 A, RPM: 24529
+Throttle: 50.00 %, PWM: 1500 us, Thrust: -889.15 g, Torque: -7.58 g-m, Voltage: 21.59 V, Current: 13.70 A, RPM: 26905
+Throttle: 50.00 %, PWM: 1500 us, Thrust: -919.42 g, Torque: -7.53 g-m, Voltage: 21.59 V, Current: 13.70 A, RPM: 26666
+Throttle: 50.00 %, PWM: 1500 us, Thrust: -896.36 g, Torque: -7.53 g-m, Voltage: 21.58 V, Current: 13.69 A, RPM: 26666
+Throttle: 60.00 %, PWM: 1600 us, Thrust: -1073.12 g, Torque: -8.94 g-m, Voltage: 21.53 V, Current: 15.94 A, RPM: 28382
+Throttle: 60.00 %, PWM: 1600 us, Thrust: -1069.52 g, Torque: -9.12 g-m, Voltage: 21.51 V, Current: 16.13 A, RPM: 28063
+Throttle: 60.00 %, PWM: 1600 us, Thrust: -1081.54 g, Torque: -9.04 g-m, Voltage: 21.53 V, Current: 15.95 A, RPM: 28462
+Throttle: 70.00 %, PWM: 1700 us, Thrust: -1173.19 g, Torque: -10.10 g-m, Voltage: 21.48 V, Current: 17.93 A, RPM: 30090
+Throttle: 70.00 %, PWM: 1700 us, Thrust: -1195.78 g, Torque: -10.21 g-m, Voltage: 21.49 V, Current: 18.02 A, RPM: 29970
+Throttle: 70.00 %, PWM: 1700 us, Thrust: -1196.02 g, Torque: -10.22 g-m, Voltage: 21.47 V, Current: 18.00 A, RPM: 29673
+Throttle: 80.00 %, PWM: 1800 us, Thrust: -1329.76 g, Torque: -11.78 g-m, Voltage: 21.42 V, Current: 20.65 A, RPM: 30959
+Throttle: 80.00 %, PWM: 1800 us, Thrust: -1337.70 g, Torque: -11.46 g-m, Voltage: 21.40 V, Current: 20.46 A, RPM: 31446
+Throttle: 80.00 %, PWM: 1800 us, Thrust: -1331.20 g, Torque: -11.29 g-m, Voltage: 21.44 V, Current: 20.24 A, RPM: 31315
+Throttle: 90.00 %, PWM: 1900 us, Thrust: -1608.83 g, Torque: -13.71 g-m, Voltage: 21.31 V, Current: 25.42 A, RPM: 33370
+Throttle: 90.00 %, PWM: 1900 us, Thrust: -1577.01 g, Torque: -14.13 g-m, Voltage: 21.31 V, Current: 26.31 A, RPM: 33370
+Throttle: 90.00 %, PWM: 1900 us, Thrust: -1623.15 g, Torque: -14.05 g-m, Voltage: 21.30 V, Current: 26.02 A, RPM: 333370
+Throttle: 100.00 %, PWM: 2000 us, Thrust: -1868.24 g, Torque: -16.78 g-m, Voltage: 21.12 V, Current: 33.12 A, RPM: 35005
+Throttle: 100.00 %, PWM: 2000 us, Thrust: -1863.22 g, Torque: -16.19 g-m, Voltage: 21.17 V, Current: 32.85 A, RPM: 35587
+Throttle: 100.00 %, PWM: 2000 us, Thrust: -1870.93 g, Torque: -16.87 g-m, Voltage: 21.15 V, Current: 33.48 A, RPM: 35502
