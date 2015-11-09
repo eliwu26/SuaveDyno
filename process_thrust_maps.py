@@ -38,7 +38,7 @@ advance ratio (normalizes rpm and forward flight)
 
 def main():
     
-    foldername = 'test_data/sess08'
+    foldername = 'test_data/sess10'
     filenames = glob.glob(foldername + '/*.txt')
     
     for filename in filenames:
@@ -61,14 +61,7 @@ def process_data(data):
     T   = data.mean.Thrust
     Q   = data.mean.Torque
     I   = data.mean.Current
-    V   = data.mean.Voltage 
-
-    ## feathering low-current data
-    #low_current_threshold = 0.8
-    #i_curr = np.argmax(I>low_current_threshold)
-    #if i_curr > 0:
-        #a = (I[i_curr]-I[0])/rpm[i_curr]**3.5
-        #I[0:i_curr] = a*rpm[0:i_curr]**3.5 + I[0]
+    V   = data.mean.Voltage
 
     dia = data.meta.Prop.Diameter
     dia,dia_units = [a.strip() for a in dia.split()]

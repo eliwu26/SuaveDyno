@@ -47,7 +47,7 @@ HX711 scale_torque(A2,A3);
 
 // ADC for Battery Voltage and Current
 #define VOLTAGE_CONSTANT 0.002955
-#define CURRENT_CONSTANT 0.010535
+#define CURRENT_CONSTANT 0.005184
 Adafruit_ADS1115 adc_battery;
 double Vcc;
 

@@ -20,7 +20,7 @@ October 2015
 
 // ADC for Battery Voltage and Current
 #define VOLTAGE_CONSTANT 0.002955
-#define CURRENT_CONSTANT 0.010000
+#define CURRENT_CONSTANT 1.0
 Adafruit_ADS1115 adc_battery;
 
 // ------------------------------------------------------------------------------
