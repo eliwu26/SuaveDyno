@@ -75,6 +75,8 @@ int pin_rpm              = A1;
 
 int jnk = 0;
 
+int maxPower = 0;
+
 // ------------------------------------------------------------------------------
 //   SETUP
 // ------------------------------------------------------------------------------
@@ -126,6 +128,7 @@ void setup() {
   analogWrite(pin_startstop_status,0);
   Serial.println();
   Serial.println("Done!");
+
   
   // Here we go!
   Serial.println("Ready to Sample.");
@@ -164,7 +167,9 @@ void loop() {
   // --------------------------------------------------------------------------
   
   if( test_started ){
-    
+    Serial.println("What's the motor's max power in Watts? ");
+    while (Serial.available() == 0) {}
+    maxPower = Serial.parseInt();
     // Tare the scales for each new test
     tare_scales();
 
@@ -215,7 +220,12 @@ void loop() {
         Serial.print("Current: ");
         Serial.print( adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT );
         Serial.print(" A, ");
-        
+
+        if(adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT * adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT > maxPower){
+          Serial.println("EMERGENCY STOP! POWER EXCEEDED!");
+          test_started =0 ;
+          break;
+        }
         // RPM
         Serial.print("RPM: ");
         Serial.print( measure_rpm() );
