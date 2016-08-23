@@ -14,6 +14,10 @@ hold the arming switch at startup,
 then power your ESC, when it's ready
 for the low PWM, push the arming switch again.
 
+The pinout of our RPM sensor( which uses a standard Futaba servo connector wire), is:
+a) white = signal
+b) red = ground (yes, this is not a typo)
+c) black = 4V 
 **/
 
 // ------------------------------------------------------------------------------
@@ -23,6 +27,7 @@ for the low PWM, push the arming switch again.
 #include <Wire.h>
 #include <Adafruit_ADS1015.h>
 #include <HX711.h>
+#include <FreqCount.h>
 #include <Servo.h>
 
 
@@ -67,15 +72,16 @@ bool armed        = false;
 
 // Pins definitions
 int pin_startstop        = 6;
-int pin_arm              = 3;
+int pin_arm              = 3; //CHANGE THIS!
 int pin_startstop_status = 4;
 int pin_arm_status       = 7;
-int pin_throttle         = 9;
+int pin_throttle         = 5; //CHANGE PHYSICAL PIN TO 5!
 int pin_rpm              = A1;
 
 int jnk = 0;
 
 int maxPower = 0;
+int numPoles = 0;
 
 // ------------------------------------------------------------------------------
 //   SETUP
@@ -126,6 +132,7 @@ void setup() {
     delay(50);
   }
   analogWrite(pin_startstop_status,0);
+  FreqCount.begin(1000);
   Serial.println();
   Serial.println("Done!");
 
@@ -143,7 +150,7 @@ void setup() {
 void loop() {
   
   // Check if device is being armed
-  if( digitalRead(pin_arm) == 0 ){ 
+  if( digitalRead() == 0 ){ 
     if( !armed ){
       armed = true;
       servo_throttle.writeMicroseconds(PWM_THROTTLE_LOW);
@@ -170,6 +177,9 @@ void loop() {
     Serial.println("What's the motor's max power in Watts? ");
     while (Serial.available() == 0) {}
     maxPower = Serial.parseInt();
+    Serial.println("How many poles does the motor have? ");
+    while(Serial.available() == 0){}
+    numPoles = Serial.parseInt();
     // Tare the scales for each new test
     tare_scales();
 
@@ -286,6 +296,13 @@ void loop() {
   }
 }
 
+unsigned measure_rpm_brushless(){
+  if (FreqCount.available()) {
+    unsigned long count = FreqCount.read();
+    return count/numPoles;
+  }
+  else return 0;
+}
 
 // Measure RPM
 unsigned measure_rpm(){
