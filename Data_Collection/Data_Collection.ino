@@ -187,7 +187,15 @@ void loop() {
       
       // Allow time to settle
       if (i_thr > 0) {
-        delay(TIME_DELAY_SETTLE);
+        long timeNow = millis();
+        while(millis()-timeNow < TIME_DELAY_SETTLE){
+          // Emergency button press
+          if( digitalRead(pin_startstop) == 0 || test_started == 0){
+            Serial.println("EMERGENCY STOP!");
+            test_started = 0;
+            break;
+          }
+        }
       }
       
       // Run sensor readings
