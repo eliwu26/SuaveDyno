@@ -37,7 +37,7 @@ c) black = 4V
 
 // High level settings
 #define PWM_THROTTLE_STEPS 10   // number of pwm steps
-#define TIME_DELAY_SETTLE  4000 // milliseconds to wait after each step
+#define TIME_DELAY_SETTLE  2000 // milliseconds to wait after each step
 #define N_SENSOR_SAMPLES   5    // number of samples per step
 
 // Scales
@@ -51,6 +51,7 @@ HX711 scale_thrust(A2,A3);
 HX711 scale_torque(A2,A3);
 
 // ADC for Battery Voltage and Current
+#define TIME_DELAY_CURRENT_SETTLE 200
 #define VOLTAGE_CONSTANT 0.002955
 #define CURRENT_CONSTANT 0.005184
 Adafruit_ADS1115 adc_battery;
@@ -71,12 +72,13 @@ bool test_started = false;
 bool armed        = false;
 
 // Pins definitions
-int pin_startstop        = 6;
+int pin_startstop        = 8;
 int pin_arm              = 3; //CHANGE THIS!
 int pin_startstop_status = 4;
 int pin_arm_status       = 7;
-int pin_throttle         = 5; //CHANGE PHYSICAL PIN TO 5!
+int pin_throttle         = 6; //CHANGE PHYSICAL PIN TO 5!
 int pin_rpm              = A1;
+int pin_rpm_brushless    = 5;
 
 int jnk = 0;
 
@@ -132,7 +134,6 @@ void setup() {
     delay(50);
   }
   analogWrite(pin_startstop_status,0);
-  FreqCount.begin(1000);
   Serial.println();
   Serial.println("Done!");
 
@@ -150,7 +151,7 @@ void setup() {
 void loop() {
   
   // Check if device is being armed
-  if( digitalRead() == 0 ){ 
+  if( digitalRead(pin_arm) == 0 ){ 
     if( !armed ){
       armed = true;
       servo_throttle.writeMicroseconds(PWM_THROTTLE_LOW);
@@ -174,12 +175,64 @@ void loop() {
   // --------------------------------------------------------------------------
   
   if( test_started ){
-    Serial.println("What's the motor's max power in Watts? ");
-    while (Serial.available() == 0) {}
+    Serial.print("What's the motor's max power in Watts? ");
+    long ledWait = millis();
+    int ledVal = 0;
+    while (Serial.available() == 0){
+      if(millis()-ledWait > 500){
+        ledVal = ledVal == 1?0:1;
+        digitalWrite(pin_startstop_status,ledVal);
+        ledWait = millis();
+      }
+      if(digitalRead(pin_startstop) == 0){
+        delay(100);
+        while(digitalRead(pin_startstop)==0){}
+        Serial.println("Test atopped.\n\nReady.");
+        test_started = 0;
+        // LED Signal Stop
+        for(int i = 0; i < 5; i ++){ 
+          digitalWrite(pin_startstop_status,1);
+          delay(50);
+          digitalWrite(pin_startstop_status,0);
+          delay(50);
+        }
+        analogWrite(pin_startstop_status,0);
+        break;
+      }
+    }
+    
+    if(!test_started) return;
+    digitalWrite(pin_startstop_status,1);
     maxPower = Serial.parseInt();
-    Serial.println("How many poles does the motor have? ");
-    while(Serial.available() == 0){}
+    Serial.println(maxPower);
+    Serial.print("How many poles does the motor have? ");
+    while(Serial.available() == 0){
+      if(millis()-ledWait > 500){
+        ledVal = ledVal == 1?0:1;
+        digitalWrite(pin_startstop_status,ledVal);
+        ledWait = millis();
+      }
+      if(digitalRead(pin_startstop) == 0){
+        delay(100);
+        while(digitalRead(pin_startstop)==0){}
+        Serial.println("Test atopped.\n\nReady.");
+        test_started = 0;
+        // LED Signal Stop
+        for(int i = 0; i < 5; i ++){ 
+          digitalWrite(pin_startstop_status,1);
+          delay(50);
+          digitalWrite(pin_startstop_status,0);
+          delay(50);
+        }
+        analogWrite(pin_startstop_status,0);
+        break;
+      }
+    }
+    
+    if(!test_started) return;
+    digitalWrite(pin_startstop_status,1);
     numPoles = Serial.parseInt();
+    Serial.println(numPoles);
     // Tare the scales for each new test
     tare_scales();
 
@@ -205,60 +258,80 @@ void loop() {
             test_started = 0;
             break;
           }
-        }
+          if(millis()-timeNow > TIME_DELAY_CURRENT_SETTLE){
+            if(adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT * adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT > maxPower){
+              Serial.println("\nEMERGENCY STOP! POWER EXCEEDED!");
+              test_started =0 ;
+              break;
+            }
+          }
+        } 
       }
       
       // Run sensor readings
       for(int i_samp = 0; i_samp < N_SENSOR_SAMPLES; i_samp++){
-        
-        // Throttle
-        Serial.print("Throttle: ");
-        Serial.print( 100.0f * ((float)i_thr)/((float)PWM_THROTTLE_STEPS) );
-        Serial.print(" %, ");
-        Serial.print("PWM: ");
-        Serial.print(this_pwm_thrust);
-        Serial.print(" us, ");
+        if(test_started){
+          // Throttle
+          Serial.print("Throttle: ");
+          Serial.print( 100.0f * ((float)i_thr)/((float)PWM_THROTTLE_STEPS) );
+          Serial.print(" %, ");
+          Serial.print("PWM: ");
+          Serial.print(this_pwm_thrust);
+          Serial.print(" us, ");
+  
+          // Thrust
+          Serial.print("Thrust: ");
+          scale_thrust.set_gain(SCALE_THRUST_CHANNEL);
+          Serial.print( scale_thrust.get_units(1) * SCALE_THRUST_CONSTANT );
+          Serial.print(" g, ");
 
-        // Thrust
-        Serial.print("Thrust: ");
-        scale_thrust.set_gain(SCALE_THRUST_CHANNEL);
-        Serial.print( scale_thrust.get_units(1) * SCALE_THRUST_CONSTANT );
-        Serial.print(" g, ");
-        
-        // Torque
-        Serial.print("Torque: ");
-        scale_torque.set_gain(SCALE_TORQUE_CHANNEL);
-        Serial.print( scale_torque.get_units(1) * SCALE_TORQUE_CONSTANT );
-        Serial.print(" g-m, ");
-        
-        // Battery Voltage and Current
-        Serial.print("Voltage: ");
-        Serial.print( adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT );
-        Serial.print(" V, ");
-        Serial.print("Current: ");
-        Serial.print( adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT );
-        Serial.print(" A, ");
-
-        if(adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT * adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT > maxPower){
-          Serial.println("EMERGENCY STOP! POWER EXCEEDED!");
-          test_started =0 ;
-          break;
-        }
-        // RPM
-        Serial.print("RPM: ");
-        Serial.print( measure_rpm() );
-        
-        // Next line
-        Serial.println();
-        
-        // Flushhhh
-        Serial.flush();
-        
-        // Emergency button press
-        if( digitalRead(pin_startstop) == 0 || test_started == 0){
-          Serial.println("EMERGENCY STOP!");
-          test_started = 0;
-          break;
+          // Emergency button press
+          if( digitalRead(pin_startstop) == 0 || test_started == 0){
+            Serial.println("EMERGENCY STOP!");
+            test_started = 0;
+            break;
+          }
+          if(adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT * adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT > maxPower){
+            Serial.println("\nEMERGENCY STOP! POWER EXCEEDED!");
+            test_started =0 ;
+            break;
+          }
+          
+          // Torque
+          Serial.print("Torque: ");
+          scale_torque.set_gain(SCALE_TORQUE_CHANNEL);
+          Serial.print( scale_torque.get_units(1) * SCALE_TORQUE_CONSTANT );
+          Serial.print(" g-m, ");
+          
+          // Battery Voltage and Current
+          Serial.print("Voltage: ");
+          Serial.print( adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT );
+          Serial.print(" V, ");
+          Serial.print("Current: ");
+          Serial.print( adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT );
+          Serial.print(" A, ");
+  
+          if(adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT * adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT > maxPower){
+            Serial.println("\nEMERGENCY STOP! POWER EXCEEDED!");
+            test_started =0 ;
+            break;
+          }
+          // RPM
+          Serial.print("RPM: ");
+          Serial.print( measure_rpm_brushless(numPoles) );
+          
+          // Next line
+          Serial.println();
+          
+          // Flushhhh
+          Serial.flush();
+          
+          // Emergency button press
+          if( digitalRead(pin_startstop) == 0 || test_started == 0){
+            Serial.println("EMERGENCY STOP!");
+            test_started = 0;
+            break;
+          }
         }
       }
       
@@ -284,7 +357,7 @@ void loop() {
     
     // Message for successful test completion
     if ( test_started ) {
-      Serial.println("Test completed.");
+      Serial.println("Test completed.\nReady.");
       Serial.println();
       test_started = 0;
     }
@@ -296,12 +369,41 @@ void loop() {
   }
 }
 
-unsigned measure_rpm_brushless(){
-  if (FreqCount.available()) {
-    unsigned long count = FreqCount.read();
-    return count/numPoles;
+// Measure RPM
+unsigned measure_rpm_brushless(int poles){
+
+  int changes  = 0;
+  long rpm = 0;
+  bool timeOut = false;
+
+  // get current time
+  long currtime = micros();                 
+  
+  while(changes < RPM_NUMBER_CHANGES && !timeOut){
+    if((micros()-currtime)>RPM_TIMEOUT) 
+      timeOut = true;
+    delayMicroseconds(1);
+    
+    if(digitalRead(pin_rpm_brushless) == LOW){
+      
+      while(digitalRead(pin_rpm_brushless) == LOW && !timeOut){        
+        if((micros()-currtime)>RPM_TIMEOUT) 
+          timeOut = true;
+        delayMicroseconds(1);
+        
+      }
+      if(digitalRead(pin_rpm_brushless)==HIGH){
+        if(changes == 0) 
+          currtime = micros();
+        changes ++;
+      }
+    }
   }
-  else return 0;
+  if (changes == RPM_NUMBER_CHANGES){
+    rpm = (((changes-1)* 60 * 1000000)/(micros()-currtime));
+  }
+  return rpm/poles * 2;
+    
 }
 
 // Measure RPM
