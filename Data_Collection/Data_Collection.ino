@@ -27,7 +27,6 @@ c) black = 4V
 #include <Wire.h>
 #include <Adafruit_ADS1015.h>
 #include <HX711.h>
-#include <FreqCount.h>
 #include <Servo.h>
 
 
@@ -38,7 +37,7 @@ c) black = 4V
 // High level settings
 #define PWM_THROTTLE_STEPS 10   // number of pwm steps
 #define TIME_DELAY_SETTLE  2000 // milliseconds to wait after each step
-#define N_SENSOR_SAMPLES   5    // number of samples per step
+#define N_SENSOR_SAMPLES   3    // number of samples per step
 
 // Scales
 #define SCALE_THRUST_CALIBRATION +461.406f
@@ -54,6 +53,8 @@ HX711 scale_torque(A2,A3);
 #define TIME_DELAY_CURRENT_SETTLE 200
 #define VOLTAGE_CONSTANT 0.002955
 #define CURRENT_CONSTANT 0.005184
+#define CURRENT_CORRECTION_CONSTANT 1.057
+#define CURRENT_CORRECTION_OFFSET 0.08
 Adafruit_ADS1115 adc_battery;
 double Vcc;
 
@@ -64,7 +65,7 @@ Servo servo_throttle;
 
 // RPM sensor
 #define RPM_NUMBER_CHANGES 5
-#define RPM_TIMEOUT        1000000 // [us]
+#define RPM_TIMEOUT        500000 // [us]
 #define RPM_HIGH_THRESHOLD 300
 
 // State Flags
@@ -259,7 +260,7 @@ void loop() {
             break;
           }
           if(millis()-timeNow > TIME_DELAY_CURRENT_SETTLE){
-            if(adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT * adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT > maxPower){
+            if(getCurrent() * adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT > maxPower){
               Serial.println("\nEMERGENCY STOP! POWER EXCEEDED!");
               test_started =0 ;
               break;
@@ -282,7 +283,8 @@ void loop() {
           // Thrust
           Serial.print("Thrust: ");
           scale_thrust.set_gain(SCALE_THRUST_CHANNEL);
-          Serial.print( scale_thrust.get_units(1) * SCALE_THRUST_CONSTANT );
+          float grams = scale_thrust.get_units(1) * SCALE_THRUST_CONSTANT;
+          Serial.print( grams );
           Serial.print(" g, ");
 
           // Emergency button press
@@ -291,7 +293,7 @@ void loop() {
             test_started = 0;
             break;
           }
-          if(adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT * adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT > maxPower){
+          if(getCurrent() * adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT > maxPower){
             Serial.println("\nEMERGENCY STOP! POWER EXCEEDED!");
             test_started =0 ;
             break;
@@ -300,6 +302,7 @@ void loop() {
           // Torque
           Serial.print("Torque: ");
           scale_torque.set_gain(SCALE_TORQUE_CHANNEL);
+          
           Serial.print( scale_torque.get_units(1) * SCALE_TORQUE_CONSTANT );
           Serial.print(" g-m, ");
           
@@ -308,10 +311,11 @@ void loop() {
           Serial.print( adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT );
           Serial.print(" V, ");
           Serial.print("Current: ");
-          Serial.print( adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT );
+          Serial.print( getCurrent() );
           Serial.print(" A, ");
-  
-          if(adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT * adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT > maxPower){
+
+          float power = getCurrent() * adc_battery.readADC_SingleEnded(0) * VOLTAGE_CONSTANT;
+          if( power > maxPower){
             Serial.println("\nEMERGENCY STOP! POWER EXCEEDED!");
             test_started =0 ;
             break;
@@ -319,6 +323,11 @@ void loop() {
           // RPM
           Serial.print("RPM: ");
           Serial.print( measure_rpm_brushless(numPoles) );
+
+          // Efficiency
+          Serial.print(" Efficiency: ");
+          Serial.print( grams/power );
+          Serial.print(" g/W");
           
           // Next line
           Serial.println();
@@ -367,6 +376,11 @@ void loop() {
     delay(3000);
     
   }
+}
+
+//Measure Current
+float getCurrent(){
+  return ((adc_battery.readADC_SingleEnded(1) * CURRENT_CONSTANT * CURRENT_CORRECTION_CONSTANT) + CURRENT_CORRECTION_OFFSET);
 }
 
 // Measure RPM
